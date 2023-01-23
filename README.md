@@ -7,7 +7,7 @@ SBOannotator: A Python tool for the automated assignment of Systems Biology Onot
 ![Code Size](https://img.shields.io/github/languages/code-size/draeger-lab/SBOannotator.svg?style=plastic)
 ![Downloads of all releases](https://img.shields.io/github/downloads/draeger-lab/SBOannotator/total.svg?style=plastic)
 
-<img align="right" src="SBOannotator_logo.png" alt="drawing" width="210"/> 
+<img align="right" src="SBOannotator_logo.png" alt="drawing" width="230"/> 
 
 *Authors* : Elisabeth Fritze & [Nantia Leonidou](https://github.com/NantiaL)
 
