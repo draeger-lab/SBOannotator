@@ -139,7 +139,6 @@ def getECNums(react):
 
 
 def handleMultipleECs(react, ECNums):
-
     # if no EC number annotated in model
     if len(ECNums) == 0:
         react.setSBOTerm('SBO:0000176')
@@ -364,6 +363,7 @@ def checkIsomerisationViaEC(react):
     else:
         handleMultipleECs(react, getECNums(react))
 
+
 def checkHydrolysisViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('3'):
@@ -452,7 +452,8 @@ def write_to_file(model, new_filename):
 
 
 def sbo_annotator(model_libsbml, database_name, new_filename):
-    """ Main function to run SBOannotator
+    """
+    Main function to run SBOannotator
 
     Inputs:
         model_libsbml (libsbml-model): input model (unannotated)
@@ -467,8 +468,8 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
 
     cur = con.cursor()
 
-    # with open(database_name + '.sql') as schema:
-    #     cur.executescript(schema.read())
+    with open(database_name + '.sql') as schema:
+        cur.executescript(schema.read())
 
     for reaction in model_libsbml.reactions:
         if not addSBOfromDB(reaction, cur):
@@ -478,6 +479,7 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
             checkSink(reaction)
             checkExchange(reaction)
             checkDemand(reaction)
+            # if transporter
             if reaction.getSBOTermID() == 'SBO:0000655':
                 checkPassiveTransport(reaction)
                 checkActiveTransport(reaction)
@@ -485,6 +487,7 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
                     checkCoTransport(reaction)
                     if reaction.getSBOTermID() == 'SBO:0000654':
                         splitSymAntiPorter(reaction)
+            # if metabolic reaction
             if reaction.getSBOTermID() == 'SBO:0000176':
                 addSBOviaEC(reaction, cur)
             if reaction.getSBOTermID() == 'SBO:0000176':
