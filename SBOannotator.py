@@ -139,37 +139,47 @@ def getECNums(react):
 
 
 def handleMultipleECs(react, ECNums):
-    # store first digits of all annotated EC numbers
-    lst = []
-    for ec in ECNums:
-        lst.append(ec.split(".")[0])
 
-    # if ec numbers are from different enzyme classes, based on first digit
-    if len(set(lst)) > 1:
-        react.setSBOTerm("SBO:0000176")  # metabolic rxn
+    # if no EC number annotated in model
+    if len(ECNums) == 0:
+        react.setSBOTerm('SBO:0000176')
 
-    else:  # if ec numbers are from SAME enzyme classes, assign parent SBO term based on first digit in EC number
+    else:
+        # store first digits of all annotated EC numbers
+        lst = []
+        for ec in ECNums:
+            lst.append(ec.split(".")[0])
 
-        # Oxidoreductases
-        if "1" in set(lst):
-            react.setSBOTerm("SBO:0000200")
-        # Transferase
-        elif "2" in set(lst):
-            react.setSBOTerm("SBO:0000402")
-        # Hydrolases
-        elif "3" in set(lst):
-            react.setSBOTerm("SBO:0000376")
-        # Lyases
-        elif "4" in set(lst):
-            react.setSBOTerm("SBO:0000211")
-        # Isomerases
-        elif "5" in set(lst):
-            react.setSBOTerm("SBO:0000377")
-        # Translocases
-        elif "7" in set(lst):
-            react.setSBOTerm("SBO:0000185")
-        else:
+        # if ec numbers are from different enzyme classes, based on first digit
+        # no ambiguous classification possible
+        if len(set(lst)) > 1:
             react.setSBOTerm("SBO:0000176")  # metabolic rxn
+
+        # if ec numbers are from the same enzyme classes,
+        # assign parent SBO term based on first digit in EC number
+        else:
+
+            # Oxidoreductases
+            if "1" in set(lst):
+                react.setSBOTerm("SBO:0000200")
+            # Transferase
+            elif "2" in set(lst):
+                react.setSBOTerm("SBO:0000402")
+            # Hydrolases
+            elif "3" in set(lst):
+                react.setSBOTerm("SBO:0000376")
+            # Lyases
+            elif "4" in set(lst):
+                react.setSBOTerm("SBO:0000211")
+            # Isomerases
+            elif "5" in set(lst):
+                react.setSBOTerm("SBO:0000377")
+            # Translocases
+            elif "7" in set(lst):
+                react.setSBOTerm("SBO:0000185")
+            # Metabolic reactions
+            else:
+                react.setSBOTerm("SBO:0000176")
 
 
 def splitTransportBiochem(react):

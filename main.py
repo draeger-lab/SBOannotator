@@ -19,3 +19,8 @@ print('-----------------------------')
 print('Reactions:', printCounts(model)[0])
 print('\nMetabolites:', printCounts(model)[1])
 print('\nGenes:', printCounts(model)[2])
+
+# counter-check which reactions remained without SBO annotation
+for r in model.reactions:
+    if r.isSetSBOTerm() is False:
+        print('No SBO set for reactions: ', r.getId())
