@@ -9,5 +9,5 @@ SBOannotator: A Python tool for the automated assignment of Systems Biology Onot
 
 <img align="right" src="SBOannotator_logo.png" alt="drawing" width="170"/> 
 
-*Authors* : [Nantia Leonidou](https://github.com/NantiaL)
+*Authors* : Elisabeth Fritze & [Nantia Leonidou](https://github.com/NantiaL)
 
