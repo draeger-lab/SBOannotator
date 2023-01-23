@@ -138,6 +138,40 @@ def getECNums(react):
     return ECNums
 
 
+def handleMultipleECs(react, ECNums):
+    # store first digits of all annotated EC numbers
+    lst = []
+    for ec in ECNums:
+        lst.append(ec.split(".")[0])
+
+    # if ec numbers are from different enzyme classes, based on first digit
+    if len(set(lst)) > 1:
+        react.setSBOTerm("SBO:0000176")  # metabolic rxn
+
+    else:  # if ec numbers are from SAME enzyme classes, assign parent SBO term based on first digit in EC number
+
+        # Oxidoreductases
+        if "1" in set(lst):
+            react.setSBOTerm("SBO:0000200")
+        # Transferase
+        elif "2" in set(lst):
+            react.setSBOTerm("SBO:0000402")
+        # Hydrolases
+        elif "3" in set(lst):
+            react.setSBOTerm("SBO:0000376")
+        # Lyases
+        elif "4" in set(lst):
+            react.setSBOTerm("SBO:0000211")
+        # Isomerases
+        elif "5" in set(lst):
+            react.setSBOTerm("SBO:0000377")
+        # Translocases
+        elif "7" in set(lst):
+            react.setSBOTerm("SBO:0000185")
+        else:
+            react.setSBOTerm("SBO:0000176")  # metabolic rxn
+
+
 def splitTransportBiochem(react):
     if len(getCompartmentList(react)) > 1 and not soleProtonTransported(react):
         react.setSBOTerm('SBO:0000655')
@@ -161,7 +195,7 @@ def checkDemand(react):
 
 
 def checkBiomass(react):
-    if ('BIOMASS' in react.getId()) or ('biomass' in react.getId()) or ('growth' in react.getId()) or (
+    if ("BIOMASS" in react.getId()) or ('biomass' in react.getId()) or ('growth' in react.getId()) or (
             'GROWTH' in react.getId()):
         react.setSBOTerm('SBO:0000629')
 
@@ -261,54 +295,71 @@ def checkRedoxViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('1'):
             react.setSBOTerm('SBO:0000200')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkAcetylationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('2.3.1'):
             react.setSBOTerm('SBO:0000215')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkGlycosylationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('2.4'):
             react.setSBOTerm('SBO:0000217')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkMethylationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('2.1.1'):
             react.setSBOTerm('SBO:0000214')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkTransaminationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('2.6.1'):
             react.setSBOTerm('SBO:0000403')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkDeaminationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('3.5.4'):
             react.setSBOTerm('SBO:0000401')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkDecarboxylationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('4.1.1'):
             react.setSBOTerm('SBO:0000399')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def checkIsomerisationViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('5'):
             react.setSBOTerm('SBO:0000377')
-
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 def checkHydrolysisViaEC(react):
     if len(getECNums(react)) == 1:
         if getECNums(react)[0].startswith('3'):
             react.setSBOTerm('SBO:0000376')
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def addSBOviaEC(react, cur):
@@ -350,6 +401,8 @@ def addSBOviaEC(react, cur):
                         if result1 is not None:
                             sbo1 = result1[0]
                             react.setSBOTerm(sbo1)
+    else:
+        handleMultipleECs(react, getECNums(react))
 
 
 def addSBOfromDB(react, cur):
