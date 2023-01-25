@@ -446,6 +446,11 @@ def addSBOforGenes(model):
             gene.setSBOTerm("SBO:0000243")
 
 
+def addSBOforCompartments(model):
+    for comp in model.getListOfCompartments():
+        comp.setSBOTerm("SBO:0000289")
+
+
 def write_to_file(model, new_filename):
     new_document = model.getSBMLDocument()
     writeSBMLToFile(new_document, new_filename)
@@ -501,6 +506,8 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
     addSBOforMetabolites(model_libsbml)
 
     addSBOforGenes(model_libsbml)
+
+    addSBOforCompartments(model_libsbml)
 
     write_to_file(model_libsbml, new_filename)
     print("\nModel with SBO Annotations written to " + new_filename, " ...")
