@@ -133,5 +133,5 @@ dmypy.json
 
 # other
 .DS_Store
-create_dbs
+\[create_dbs\]
 ~$*
