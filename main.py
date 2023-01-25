@@ -10,8 +10,9 @@ print('-----------------------------')
 print('Reactions:', printCounts(model)[0])
 print('\nMetabolites:', printCounts(model)[1])
 print('\nGenes:', printCounts(model)[2])
+print('\nCompartments:', printCounts(model)[3])
 
-sbo_annotator(model, 'create_dbs', model.getId()+'_annotated.xml')
+sbo_annotator(model, 'create_dbs', model.getId()+'_SBOannotated.xml')
 
 print('-----------------------------')
 print('SBO after: ')
@@ -19,6 +20,8 @@ print('-----------------------------')
 print('Reactions:', printCounts(model)[0])
 print('\nMetabolites:', printCounts(model)[1])
 print('\nGenes:', printCounts(model)[2])
+print('\nCompartments:', printCounts(model)[3])
+
 
 # counter-check which reactions remained without SBO annotation
 for r in model.reactions:
