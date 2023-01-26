@@ -12,3 +12,40 @@ SBOannotator: A Python tool for the automated assignment of Systems Biology Onto
 
 *Authors* : Elisabeth Fritze & [Nantia Leonidou](https://github.com/NantiaL)
 
+### Overview
+
+### How to cite the SBOannotator?
+
+The online version of the SBOannotator is described in this article: 
+
+
+### Installation
+```
+pip install sboannotator
+```
+
+### Prerequisites
+
+This tool has the following dependencies:
+
+python 3.8.5
+
+Packages:
+* sqlite3
+* libsbml
+* collections
+
+### Input data
++ `doc`: an SBML document
++ `model_libsbml`: SBML model of interest
++ `database_name`: name of imported database, without extension
++ `new_filename`: file name for output model
+
+
+### Outputs
++ `model_libsbml`: Annotated libsbml model
+  
+
+### Usage
+To run SBOannotator use the `main.py` script.
+

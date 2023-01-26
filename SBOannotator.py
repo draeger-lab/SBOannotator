@@ -484,6 +484,7 @@ def sbo_annotator(doc,model_libsbml, database_name, new_filename):
     Main function to run SBOannotator
 
     Inputs:
+        doc: SBML document
         model_libsbml (libsbml-model): input model (unannotated)
         database_name (str): name of imported database, without extension
         new_filename (str): file name for output model
