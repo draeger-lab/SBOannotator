@@ -173,6 +173,9 @@ def handleMultipleECs(react, ECNums):
             # Isomerases
             elif "5" in set(lst):
                 react.setSBOTerm("SBO:0000377")
+            # Ligases, proper SBO is missing from graph --> use one for modification of covalent bonds
+            elif "6" in set(lst):
+                react.setSBOTerm("SBO:0000182")
             # Translocases
             elif "7" in set(lst):
                 react.setSBOTerm("SBO:0000185")
