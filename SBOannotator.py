@@ -66,8 +66,8 @@ def getMetaboliteIds(reac):
     return getReactantIds(reac) + getProductIds(reac)
 
 
-def getCompartmentlessMetaboliteIds(react):
-    return getCompartmentlessReactantIds(react) + getCompartmentlessProductIds(react)
+# def getCompartmentlessMetaboliteIds(react):
+#     return getCompartmentlessReactantIds(react) + getCompartmentlessProductIds(react)
 
 
 def getReactantCompartmentList(react):
@@ -182,6 +182,7 @@ def handleMultipleECs(react, ECNums):
 
 
 def splitTransportBiochem(react):
+    """" Classify between transport reactions and biochemical reactions """
     if len(getCompartmentList(react)) > 1 and not soleProtonTransported(react):
         react.setSBOTerm('SBO:0000655')
     else:
@@ -300,76 +301,76 @@ def checkDeamination(react):
             react.setSBOTerm('SBO:0000401')
 
 
-def checkRedoxViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('1'):
-            react.setSBOTerm('SBO:0000200')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkAcetylationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('2.3.1'):
-            react.setSBOTerm('SBO:0000215')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkGlycosylationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('2.4'):
-            react.setSBOTerm('SBO:0000217')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkMethylationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('2.1.1'):
-            react.setSBOTerm('SBO:0000214')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkTransaminationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('2.6.1'):
-            react.setSBOTerm('SBO:0000403')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkDeaminationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('3.5.4'):
-            react.setSBOTerm('SBO:0000401')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkDecarboxylationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('4.1.1'):
-            react.setSBOTerm('SBO:0000399')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkIsomerisationViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('5'):
-            react.setSBOTerm('SBO:0000377')
-    else:
-        handleMultipleECs(react, getECNums(react))
-
-
-def checkHydrolysisViaEC(react):
-    if len(getECNums(react)) == 1:
-        if getECNums(react)[0].startswith('3'):
-            react.setSBOTerm('SBO:0000376')
-    else:
-        handleMultipleECs(react, getECNums(react))
+# def checkRedoxViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('1'):
+#             react.setSBOTerm('SBO:0000200')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkAcetylationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('2.3.1'):
+#             react.setSBOTerm('SBO:0000215')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkGlycosylationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('2.4'):
+#             react.setSBOTerm('SBO:0000217')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkMethylationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('2.1.1'):
+#             react.setSBOTerm('SBO:0000214')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkTransaminationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('2.6.1'):
+#             react.setSBOTerm('SBO:0000403')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkDeaminationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('3.5.4'):
+#             react.setSBOTerm('SBO:0000401')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkDecarboxylationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('4.1.1'):
+#             react.setSBOTerm('SBO:0000399')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkIsomerisationViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('5'):
+#             react.setSBOTerm('SBO:0000377')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
+#
+#
+# def checkHydrolysisViaEC(react):
+#     if len(getECNums(react)) == 1:
+#         if getECNums(react)[0].startswith('3'):
+#             react.setSBOTerm('SBO:0000376')
+#     else:
+#         handleMultipleECs(react, getECNums(react))
 
 
 def addSBOviaEC(react, cur):
@@ -446,9 +447,31 @@ def addSBOforGenes(model):
             gene.setSBOTerm("SBO:0000243")
 
 
+def addSBOforModel(doc):
+    doc.setSBOTerm("SBO:0000624")
+
+
+def addSBOforGroups(model):
+    mplugin = model.getPlugin("groups")
+    # if groups are in model defined
+    if mplugin is not None:
+        for grp in mplugin.getListOfGroups():
+            grp.setSBOTerm("SBO:0000633")
+
+
+def addSBOforParameters(model):
+    for param in model.getListOfParameters():
+        # reaction bounds
+        if 'R_' in param.getId():
+            param.setSBOTerm("SBO:0000625")
+        # default set bounds
+        else:
+            param.setSBOTerm("SBO:0000626")
+
+
 def addSBOforCompartments(model):
-    for comp in model.getListOfCompartments():
-        comp.setSBOTerm("SBO:0000289")
+    for cmp in model.getListOfCompartments():
+        cmp.setSBOTerm("SBO:0000290")
 
 
 def write_to_file(model, new_filename):
@@ -456,7 +479,7 @@ def write_to_file(model, new_filename):
     writeSBMLToFile(new_document, new_filename)
 
 
-def sbo_annotator(model_libsbml, database_name, new_filename):
+def sbo_annotator(doc,model_libsbml, database_name, new_filename):
     """
     Main function to run SBOannotator
 
@@ -470,7 +493,6 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
 
     # connect to database
     con = sqlite3.connect(database_name)
-
     cur = con.cursor()
 
     with open(database_name + '.sql') as schema:
@@ -478,23 +500,28 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
 
     for reaction in model_libsbml.reactions:
         if not addSBOfromDB(reaction, cur):
+            # print(reaction.getId())
             reaction.unsetSBOTerm()
-            splitTransportBiochem(reaction)
+
+            splitTransportBiochem(reaction)  # needs to be checked first
+
             checkBiomass(reaction)
             checkSink(reaction)
             checkExchange(reaction)
             checkDemand(reaction)
+
             # if transporter
             if reaction.getSBOTermID() == 'SBO:0000655':
                 checkPassiveTransport(reaction)
                 checkActiveTransport(reaction)
-                if reaction.getSBOTermID() != 'SBO:0000657':
+                if reaction.getSBOTermID() != 'SBO:0000657':  # if not active
                     checkCoTransport(reaction)
-                    if reaction.getSBOTermID() == 'SBO:0000654':
+                    if reaction.getSBOTermID() == 'SBO:0000654':  # if not co-transport
                         splitSymAntiPorter(reaction)
             # if metabolic reaction
             if reaction.getSBOTermID() == 'SBO:0000176':
-                addSBOviaEC(reaction, cur)
+                addSBOviaEC(reaction, cur)  # use create_dbs.sql
+            # if no hit found in db and still annotated as generic biochemical reaction
             if reaction.getSBOTermID() == 'SBO:0000176':
                 checkRedox(reaction)
                 checkGlycosylation(reaction)
@@ -507,6 +534,12 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
 
     addSBOforGenes(model_libsbml)
 
+    addSBOforModel(doc)
+
+    addSBOforGroups(model_libsbml)
+
+    addSBOforParameters(model_libsbml)
+
     addSBOforCompartments(model_libsbml)
 
     write_to_file(model_libsbml, new_filename)
@@ -515,6 +548,8 @@ def sbo_annotator(model_libsbml, database_name, new_filename):
     # close database connection
     cur.close()
     con.close()
+
+    return model_libsbml
 
 
 def printCounts(model_sbml):
