@@ -34,6 +34,8 @@ Packages:
 * sqlite3
 * libsbml
 * collections
+* requests
+* json
 
 ### Input data
 + `doc`: an SBML document

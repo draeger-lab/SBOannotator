@@ -133,6 +133,6 @@ dmypy.json
 
 # other
 .DS_Store
-\[create_dbs\]
-\[sbo_database\]
 ~$*
+/create_dbs
+/sbo_database

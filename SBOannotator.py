@@ -1,9 +1,10 @@
 __author__ = "Elisabeth Fritze & Nantia Leonidou"
 
-# import psycopg2
 import sqlite3
 from libsbml import writeSBMLToFile
 from collections import Counter
+import requests
+import json
 
 
 def getCompartmentlessSpeciesId(speciesReference):
@@ -138,50 +139,66 @@ def getECNums(react):
     return ECNums
 
 
-def handleMultipleECs(react, ECNums):
-    # if no EC number annotated in model
-    if len(ECNums) == 0:
-        react.setSBOTerm('SBO:0000176')
+def multipleECs(react, ECNums):
+    # store first digits of all annotated EC numbers
+    lst = []
+    for ec in ECNums:
+        lst.append(ec.split(".")[0])
 
+    # if ec numbers are from different enzyme classes, based on first digit
+    # no ambiguous classification possible
+    if len(set(lst)) > 1:
+        react.setSBOTerm("SBO:0000176")  # metabolic rxn
+
+    # if ec numbers are from the same enzyme classes,
+    # assign parent SBO term based on first digit in EC number
     else:
-        # store first digits of all annotated EC numbers
-        lst = []
-        for ec in ECNums:
-            lst.append(ec.split(".")[0])
 
-        # if ec numbers are from different enzyme classes, based on first digit
-        # no ambiguous classification possible
-        if len(set(lst)) > 1:
-            react.setSBOTerm("SBO:0000176")  # metabolic rxn
-
-        # if ec numbers are from the same enzyme classes,
-        # assign parent SBO term based on first digit in EC number
+        # Oxidoreductases
+        if "1" in set(lst):
+            react.setSBOTerm("SBO:0000200")
+        # Transferase
+        elif "2" in set(lst):
+            react.setSBOTerm("SBO:0000402")
+        # Hydrolases
+        elif "3" in set(lst):
+            react.setSBOTerm("SBO:0000376")
+        # Lyases
+        elif "4" in set(lst):
+            react.setSBOTerm("SBO:0000211")
+        # Isomerases
+        elif "5" in set(lst):
+            react.setSBOTerm("SBO:0000377")
+        # Ligases, proper SBO is missing from graph --> use one for modification of covalent bonds
+        elif "6" in set(lst):
+            react.setSBOTerm("SBO:0000182")
+        # Translocases
+        elif "7" in set(lst):
+            react.setSBOTerm("SBO:0000185")
+        # Metabolic reactions
         else:
+            react.setSBOTerm("SBO:0000176")
 
-            # Oxidoreductases
-            if "1" in set(lst):
-                react.setSBOTerm("SBO:0000200")
-            # Transferase
-            elif "2" in set(lst):
-                react.setSBOTerm("SBO:0000402")
-            # Hydrolases
-            elif "3" in set(lst):
-                react.setSBOTerm("SBO:0000376")
-            # Lyases
-            elif "4" in set(lst):
-                react.setSBOTerm("SBO:0000211")
-            # Isomerases
-            elif "5" in set(lst):
-                react.setSBOTerm("SBO:0000377")
-            # Ligases, proper SBO is missing from graph --> use one for modification of covalent bonds
-            elif "6" in set(lst):
-                react.setSBOTerm("SBO:0000182")
-            # Translocases
-            elif "7" in set(lst):
-                react.setSBOTerm("SBO:0000185")
-            # Metabolic reactions
-            else:
-                react.setSBOTerm("SBO:0000176")
+
+def handleMultipleOrNoECs(react, ECNums):
+    # note: this step may take longer if input model does not contain any annotations at all or no EC numbers for particular rxns.
+    if len(ECNums) == 0:
+        try:
+            res = requests.get("http://bigg.ucsd.edu/api/v2/universal/reactions/" + react.getId()[2:])
+            bigg_json = res.content.decode("utf-8")
+            info = json.loads(bigg_json)
+
+            for link in info["database_links"]["EC Number"]:
+                ECNums.append(link["id"])
+
+            multipleECs(react, ECNums)
+
+        except:
+            react.setSBOTerm('SBO:0000176')
+
+    # if multiple EC numbers annotated in model
+    else:
+        multipleECs(react, ECNums)
 
 
 def splitTransportBiochem(react):
@@ -309,7 +326,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('1'):
 #             react.setSBOTerm('SBO:0000200')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkAcetylationViaEC(react):
@@ -317,7 +334,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('2.3.1'):
 #             react.setSBOTerm('SBO:0000215')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkGlycosylationViaEC(react):
@@ -325,7 +342,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('2.4'):
 #             react.setSBOTerm('SBO:0000217')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkMethylationViaEC(react):
@@ -333,7 +350,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('2.1.1'):
 #             react.setSBOTerm('SBO:0000214')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkTransaminationViaEC(react):
@@ -341,7 +358,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('2.6.1'):
 #             react.setSBOTerm('SBO:0000403')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkDeaminationViaEC(react):
@@ -349,7 +366,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('3.5.4'):
 #             react.setSBOTerm('SBO:0000401')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkDecarboxylationViaEC(react):
@@ -357,7 +374,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('4.1.1'):
 #             react.setSBOTerm('SBO:0000399')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkIsomerisationViaEC(react):
@@ -365,7 +382,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('5'):
 #             react.setSBOTerm('SBO:0000377')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 #
 #
 # def checkHydrolysisViaEC(react):
@@ -373,7 +390,7 @@ def checkDeamination(react):
 #         if getECNums(react)[0].startswith('3'):
 #             react.setSBOTerm('SBO:0000376')
 #     else:
-#         handleMultipleECs(react, getECNums(react))
+#         handleMultipleOrNoECs(react, getECNums(react))
 
 
 def addSBOviaEC(react, cur):
@@ -416,7 +433,7 @@ def addSBOviaEC(react, cur):
                             sbo1 = result1[0]
                             react.setSBOTerm(sbo1)
     else:
-        handleMultipleECs(react, getECNums(react))
+        handleMultipleOrNoECs(react, getECNums(react))
 
 
 def addSBOfromDB(react, cur):
@@ -482,7 +499,7 @@ def write_to_file(model, new_filename):
     writeSBMLToFile(new_document, new_filename)
 
 
-def sbo_annotator(doc,model_libsbml, database_name, new_filename):
+def sbo_annotator(doc, model_libsbml, database_name, new_filename):
     """
     Main function to run SBOannotator
 
