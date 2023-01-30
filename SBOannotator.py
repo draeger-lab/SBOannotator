@@ -183,6 +183,29 @@ def multipleECs(react, ECNums):
 def handleMultipleOrNoECs(react, ECNums):
     # note: this step may take longer if input model does not contain any annotations at all or no EC numbers for particular rxns.
     if len(ECNums) == 0:
+        # try:
+        #     res = requests.get("http://bigg.ucsd.edu/api/v2/universal/reactions/" + react.getId()[2:])
+        #     bigg_json = res.content.decode("utf-8")
+        #     info = json.loads(bigg_json)
+        #
+        #     for link in info["database_links"]["EC Number"]:
+        #         ECNums.append(link["id"])
+        #
+        #     multipleECs(react, ECNums)
+        #
+        # except:
+        react.setSBOTerm('SBO:0000176')
+
+    # if multiple EC numbers annotated in model
+    else:
+        multipleECs(react, ECNums)
+
+
+def callForECAnnot(model):
+    """ API call to obtain EC numbers """
+
+    ECNums = []
+    for react in model.reactions:
         try:
             res = requests.get("http://bigg.ucsd.edu/api/v2/universal/reactions/" + react.getId()[2:])
             bigg_json = res.content.decode("utf-8")
@@ -195,10 +218,6 @@ def handleMultipleOrNoECs(react, ECNums):
 
         except:
             react.setSBOTerm('SBO:0000176')
-
-    # if multiple EC numbers annotated in model
-    else:
-        multipleECs(react, ECNums)
 
 
 def splitTransportBiochem(react):
@@ -499,13 +518,14 @@ def write_to_file(model, new_filename):
     writeSBMLToFile(new_document, new_filename)
 
 
-def sbo_annotator(doc, model_libsbml, database_name, new_filename):
+def sbo_annotator(doc, model_libsbml, model_annotated, database_name, new_filename):
     """
     Main function to run SBOannotator
 
     Inputs:
         doc: SBML document
         model_libsbml (libsbml-model): input model (unannotated)
+        model_annotated (boolean): True, if model already includes annotations with EC numbers
         database_name (str): name of imported database, without extension
         new_filename (str): file name for output model
     Output:
@@ -518,6 +538,11 @@ def sbo_annotator(doc, model_libsbml, database_name, new_filename):
 
     with open(database_name + '.sql') as schema:
         cur.executescript(schema.read())
+
+    # model is already annotated?
+    if not model_annotated:
+        print('Model is not annotated. Use API call ... ')
+        callForECAnnot(model_libsbml)
 
     for reaction in model_libsbml.reactions:
         if not addSBOfromDB(reaction, cur):
