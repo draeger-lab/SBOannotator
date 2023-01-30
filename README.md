@@ -21,7 +21,7 @@ The online version of the SBOannotator is described in this article:
 
 ### Installation
 ```
-pip install sboannotator
+pip install SBOannotator
 ```
 
 ### Prerequisites
