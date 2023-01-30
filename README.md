@@ -40,6 +40,7 @@ Packages:
 ### Input data
 + `doc`: an SBML document
 + `model_libsbml`: SBML model of interest
++ `model_annotated`: True, if model already includes annotations with EC numbers
 + `database_name`: name of imported database, without extension
 + `new_filename`: file name for output model
 
@@ -49,5 +50,13 @@ Packages:
   
 
 ### Usage
-To run SBOannotator use the `main.py` script.
+To run SBOannotator use the `main.py` script and modify the parameters in the `readSBML` and `sbo_annotator` 
+functions as wished.
+
+If ERROR occurs, check the current version of Python: 
+
+- `python --version'`
+- `conda install python=3.8`
+
+
 
