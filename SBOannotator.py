@@ -70,7 +70,6 @@ def getMetaboliteIds(reac):
 # def getCompartmentlessMetaboliteIds(react):
 #     return getCompartmentlessReactantIds(react) + getCompartmentlessProductIds(react)
 
-
 def getReactantCompartmentList(react):
     compartments = []
     for metabolite in react.getListOfReactants():
@@ -183,19 +182,7 @@ def multipleECs(react, ECNums):
 def handleMultipleOrNoECs(react, ECNums):
     # note: this step may take longer if input model does not contain any annotations at all or no EC numbers for particular rxns.
     if len(ECNums) == 0:
-        # try:
-        #     res = requests.get("http://bigg.ucsd.edu/api/v2/universal/reactions/" + react.getId()[2:])
-        #     bigg_json = res.content.decode("utf-8")
-        #     info = json.loads(bigg_json)
-        #
-        #     for link in info["database_links"]["EC Number"]:
-        #         ECNums.append(link["id"])
-        #
-        #     multipleECs(react, ECNums)
-        #
-        # except:
         react.setSBOTerm('SBO:0000176')
-
     # if multiple EC numbers annotated in model
     else:
         multipleECs(react, ECNums)
@@ -480,14 +467,28 @@ def addSBOforMetabolites(model):
 def addSBOforGenes(model):
     # add genes SBO
     model_fbc = model.getPlugin("fbc")
-    # if model has genes
+    # if model has genes, not always given
     if model_fbc is not None:
         for gene in model_fbc.getListOfGeneProducts():
             gene.setSBOTerm("SBO:0000243")
 
 
-def addSBOforModel(doc):
-    doc.setSBOTerm("SBO:0000624")
+def addSBOforModel(doc, modelType):
+    'Add SBO Term to define the underlying modelling framework'
+    if modelType == 'constraint-based':
+        doc.setSBOTerm("SBO:0000693")
+    elif modelType == 'logical':
+        doc.setSBOTerm("SBO:0000234")
+    elif modelType == 'continuous':
+        doc.setSBOTerm("SBO:0000062")
+    elif modelType == 'discrete':
+        doc.setSBOTerm("SBO:0000063")
+    elif modelType == 'hybrid':
+        doc.setSBOTerm("SBO:0000681")
+    elif modelType == 'logical':
+        doc.setSBOTerm("SBO:0000234")
+    else:
+        doc.setSBOTerm("SBO_0000004")
 
 
 def addSBOforGroups(model):
@@ -518,13 +519,14 @@ def write_to_file(model, new_filename):
     writeSBMLToFile(new_document, new_filename)
 
 
-def sbo_annotator(doc, model_libsbml, model_annotated, database_name, new_filename):
+def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name, new_filename):
     """
     Main function to run SBOannotator
 
     Inputs:
         doc: SBML document
         model_libsbml (libsbml-model): input model (unannotated)
+        modelType (str): type of modelling framework
         model_annotated (boolean): True, if model already includes annotations with EC numbers
         database_name (str): name of imported database, without extension
         new_filename (str): file name for output model
@@ -580,7 +582,7 @@ def sbo_annotator(doc, model_libsbml, model_annotated, database_name, new_filena
 
     addSBOforGenes(model_libsbml)
 
-    addSBOforModel(doc)
+    addSBOforModel(doc,modelType)
 
     addSBOforGroups(model_libsbml)
 

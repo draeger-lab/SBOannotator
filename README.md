@@ -40,9 +40,18 @@ Packages:
 ### Input data
 + `doc`: an SBML document
 + `model_libsbml`: SBML model of interest
++ `modelType`: type of modelling framework (see below)
 + `model_annotated`: True, if model already includes annotations with EC numbers
 + `database_name`: name of imported database, without extension
 + `new_filename`: file name for output model
+
+Types of modelling framework accepted:
+- constraint-based
+- logical
+- continuous
+- discrete
+- hybrid
+- logical
 
 
 ### Outputs
@@ -56,7 +65,7 @@ functions as wished.
 If ERROR occurs, check the current version of Python: 
 
 - `python --version'`
-- `conda install python=3.8`
+- `conda install python=3.8.5`
 
 
 
