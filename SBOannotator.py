@@ -6,6 +6,11 @@ from collections import Counter
 import requests
 import json
 
+# define globals
+DEMAND_IDS = ["_DM_", "_DEMAND_", "_demand_"]
+SINK_IDS = ["_SK_" , "_SINK_", "_sink_"]
+EXCHANGE_IDS = ["_EX_" , "_EXCHANGE_", "_exchange_"]
+BIOMASS_IDS = ["BIOMASS", 'biomass', 'growth', 'GROWTH']
 
 def getCompartmentlessSpeciesId(speciesReference):
     speciesId = speciesReference.getSpecies()
@@ -216,23 +221,22 @@ def splitTransportBiochem(react):
 
 
 def checkSink(react):
-    if ("_SK_" in react.getId()) or ("_SINK_" in react.getId()) or ("_sink_" in react.getId()):
+    if react.getId() in SINK_IDS:
         react.setSBOTerm('SBO:0000632')
 
 
 def checkExchange(react):
-    if ("_EX_" in react.getId()) or ("_EXCHANGE_" in react.getId()) or ("_exchange_" in react.getId()):
+    if react.getId() in EXCHANGE_IDS:
         react.setSBOTerm('SBO:0000627')
 
 
 def checkDemand(react):
-    if ("_DM_" in react.getId()) or ("_DEMAND_" in react.getId()) or ("_demand_" in react.getId()):
+    if react.getId() in DEMAND_IDS:
         react.setSBOTerm('SBO:0000628')
 
 
 def checkBiomass(react):
-    if ("BIOMASS" in react.getId()) or ('biomass' in react.getId()) or ('growth' in react.getId()) or (
-            'GROWTH' in react.getId()):
+    if react.getId() in BIOMASS_IDS:
         react.setSBOTerm('SBO:0000629')
 
 
