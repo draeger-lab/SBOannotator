@@ -1,7 +1,7 @@
 from SBOannotator import *
 from libsbml import *
 
-doc = readSBML("iCGB21FR.xml")
+doc = readSBML("models/iCGB21FR.xml")
 model = doc.getModel()
 
 print('-----------------------------')
@@ -12,7 +12,7 @@ print('\nMetabolites:', printCounts(model)[1])
 print('\nGenes:', printCounts(model)[2])
 print('\nCompartments:', printCounts(model)[3])
 
-sbo_annotator(doc, model, 'constraint-based', True, 'create_dbs', model.getId()+'_SBOannotated.xml')
+sbo_annotator(doc, model, 'constraint-based', True, 'create_dbs', 'models/'+model.getId()+'_SBOannotated.xml')
 
 print('-----------------------------')
 print('SBO after: ')
