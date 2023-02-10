@@ -8,9 +8,10 @@ import json
 
 # define globals
 DEMAND_IDS = ["_DM_", "_DEMAND_", "_demand_"]
-SINK_IDS = ["_SK_" , "_SINK_", "_sink_"]
-EXCHANGE_IDS = ["_EX_" , "_EXCHANGE_", "_exchange_"]
+SINK_IDS = ["_SK_", "_SINK_", "_sink_"]
+EXCHANGE_IDS = ["_EX_", "_EXCHANGE_", "_exchange_"]
 BIOMASS_IDS = ["BIOMASS", 'biomass', 'growth', 'GROWTH']
+
 
 def getCompartmentlessSpeciesId(speciesReference):
     speciesId = speciesReference.getSpecies()
@@ -586,7 +587,7 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
 
     addSBOforGenes(model_libsbml)
 
-    addSBOforModel(doc,modelType)
+    addSBOforModel(doc, modelType)
 
     addSBOforGroups(model_libsbml)
 
