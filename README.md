@@ -1,6 +1,6 @@
 # SBOannotator
 
-SBOannotator: A Python tool for the automated assignment of Systems Biology Ontology terms
+SBOannotator: a Python tool for the automated assignment of Systems Biology Ontology terms
 
 [![License (LGPL version 3)](https://img.shields.io/badge/license-LGPLv3.0-blue.svg?style=plastic)](http://opensource.org/licenses/LGPL-3.0)
 [![Latest version](https://img.shields.io/badge/Latest_version-0.9-brightgreen.svg?style=plastic)](https://github.com/draeger-lab/SBOannotator/releases/)

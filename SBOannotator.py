@@ -222,22 +222,22 @@ def splitTransportBiochem(react):
 
 
 def checkSink(react):
-    if react.getId() in SINK_IDS:
+    if any(prefix in react.getId() for prefix in SINK_IDS):
         react.setSBOTerm('SBO:0000632')
 
 
 def checkExchange(react):
-    if react.getId() in EXCHANGE_IDS:
+    if any(prefix in react.getId() for prefix in EXCHANGE_IDS):
         react.setSBOTerm('SBO:0000627')
 
 
 def checkDemand(react):
-    if react.getId() in DEMAND_IDS:
+    if any(prefix in react.getId() for prefix in DEMAND_IDS):
         react.setSBOTerm('SBO:0000628')
 
 
 def checkBiomass(react):
-    if react.getId() in BIOMASS_IDS:
+    if any(prefix in react.getId() for prefix in BIOMASS_IDS):
         react.setSBOTerm('SBO:0000629')
 
 

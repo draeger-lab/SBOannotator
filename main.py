@@ -1,7 +1,7 @@
 from SBOannotator import *
 from libsbml import *
 
-doc = readSBML("models/iCGB21FR.xml")
+doc = readSBML("models/RECON1.xml")
 model = doc.getModel()
 
 print('-----------------------------')
