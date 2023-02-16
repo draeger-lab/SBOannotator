@@ -556,7 +556,8 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
             # print(reaction.getId())
             reaction.unsetSBOTerm()
 
-            splitTransportBiochem(reaction)  # needs to be checked first
+            # needs to be checked first
+            splitTransportBiochem(reaction)
 
             checkBiomass(reaction)
             checkSink(reaction)

@@ -134,6 +134,11 @@ dmypy.json
 # other
 .DS_Store
 ~$*
+BiGG_models_annotation.py
+download_all_BiGG_models.py
+SBOannotator_output.log
+parse_log_and_store_counts.py
+create_plots.py
 /create_dbs
 /sbo_database
 /dist2/
