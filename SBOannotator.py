@@ -1,4 +1,6 @@
-__author__ = "Elisabeth Fritze & Nantia Leonidou"
+__author__ = 'Elisabeth Fritze & Nantia Leonidou'
+
+""" SBOannotator: a Python tool for the automated assignment of Systems Biology Ontology terms """
 
 import sqlite3
 from libsbml import writeSBMLToFile
@@ -7,10 +9,10 @@ import requests
 import json
 
 # define globals
-DEMAND_IDS = ["_DM_", "_DEMAND_", "_demand_"]
-SINK_IDS = ["_SK_", "_SINK_", "_sink_"]
-EXCHANGE_IDS = ["_EX_", "_EXCHANGE_", "_exchange_"]
-BIOMASS_IDS = ["BIOMASS", 'biomass', 'growth', 'GROWTH']
+DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_']
+SINK_IDS = ['_SK_', '_SINK_', '_sink_']
+EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_']
+BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH']
 
 
 def getCompartmentlessSpeciesId(speciesReference):
@@ -131,12 +133,12 @@ def soleProtonTransported(react):
     soleProton = False
     for compartment in compDict:
         if len(compDict[compartment]) == 1:
-            soleProton = soleProton or compDict[compartment][0] == "M_h"
+            soleProton = soleProton or compDict[compartment][0] == 'M_h'
     return soleProton and not isProtonTransport(react) and not moreThanTwoCompartmentTransport(react)
 
 
 def getECNums(react):
-    lines = react.getAnnotationString().split("\n")
+    lines = react.getAnnotationString().split('\n')
     ECNums = []
     for line in lines:
         if 'ec-code' in line:
@@ -148,41 +150,41 @@ def multipleECs(react, ECNums):
     # store first digits of all annotated EC numbers
     lst = []
     for ec in ECNums:
-        lst.append(ec.split(".")[0])
+        lst.append(ec.split('.')[0])
 
     # if ec numbers are from different enzyme classes, based on first digit
     # no ambiguous classification possible
     if len(set(lst)) > 1:
-        react.setSBOTerm("SBO:0000176")  # metabolic rxn
+        react.setSBOTerm('SBO:0000176')  # metabolic rxn
 
     # if ec numbers are from the same enzyme classes,
     # assign parent SBO term based on first digit in EC number
     else:
 
         # Oxidoreductases
-        if "1" in set(lst):
-            react.setSBOTerm("SBO:0000200")
+        if '1' in set(lst):
+            react.setSBOTerm('SBO:0000200')
         # Transferase
-        elif "2" in set(lst):
-            react.setSBOTerm("SBO:0000402")
+        elif '2' in set(lst):
+            react.setSBOTerm('SBO:0000402')
         # Hydrolases
-        elif "3" in set(lst):
-            react.setSBOTerm("SBO:0000376")
+        elif '3' in set(lst):
+            react.setSBOTerm('SBO:0000376')
         # Lyases
-        elif "4" in set(lst):
-            react.setSBOTerm("SBO:0000211")
+        elif '4' in set(lst):
+            react.setSBOTerm('SBO:0000211')
         # Isomerases
-        elif "5" in set(lst):
-            react.setSBOTerm("SBO:0000377")
+        elif '5' in set(lst):
+            react.setSBOTerm('SBO:0000377')
         # Ligases, proper SBO is missing from graph --> use one for modification of covalent bonds
-        elif "6" in set(lst):
-            react.setSBOTerm("SBO:0000182")
+        elif '6' in set(lst):
+            react.setSBOTerm('SBO:0000182')
         # Translocases
-        elif "7" in set(lst):
-            react.setSBOTerm("SBO:0000185")
+        elif '7' in set(lst):
+            react.setSBOTerm('SBO:0000185')
         # Metabolic reactions
         else:
-            react.setSBOTerm("SBO:0000176")
+            react.setSBOTerm('SBO:0000176')
 
 
 def handleMultipleOrNoECs(react, ECNums):
@@ -200,12 +202,12 @@ def callForECAnnot(model):
     ECNums = []
     for react in model.reactions:
         try:
-            res = requests.get("http://bigg.ucsd.edu/api/v2/universal/reactions/" + react.getId()[2:])
-            bigg_json = res.content.decode("utf-8")
+            res = requests.get('http://bigg.ucsd.edu/api/v2/universal/reactions/' + react.getId()[2:])
+            bigg_json = res.content.decode('utf-8')
             info = json.loads(bigg_json)
 
-            for link in info["database_links"]["EC Number"]:
-                ECNums.append(link["id"])
+            for link in info['database_links']['EC Number']:
+                ECNums.append(link['id'])
 
             multipleECs(react, ECNums)
 
@@ -258,7 +260,7 @@ def checkActiveTransport(react):
     if 'M_atp_c' in reactantIds or 'M_pep_c' in reactantIds:
         react.setSBOTerm('SBO:0000657')
         if react.getReversible():
-            print("Active reaction but reversible " + react.getId())
+            print(f'Active reaction but reversible {react.getId()}')
 
 
 def checkCoTransport(react):
@@ -407,11 +409,11 @@ def checkDeamination(react):
 def addSBOviaEC(react, cur):
     if len(getECNums(react)) == 1:
         ECnum = getECNums(react)[0]
-        splittedEC = ECnum.split(".")
+        splittedEC = ECnum.split('.')
         if len(splittedEC) == 4:
             ECpos1 = splittedEC[0]
-            ECpos1to2 = ECpos1 + "." + splittedEC[1]
-            ECpos1to3 = ECpos1to2 + "." + splittedEC[2]
+            ECpos1to2 = ECpos1 + '.' + splittedEC[1]
+            ECpos1to3 = ECpos1to2 + '.' + splittedEC[2]
             query4 = cur.execute("""SELECT sbo_term
                                      FROM ec_to_sbo 
                                     WHERE ecnum = ?""", [ECnum])
@@ -466,57 +468,57 @@ def addSBOforMetabolites(model):
     # add metabolites SBO
     for met in model.species:
         met_id = met.getId()
-        model.getSpecies(met_id).setSBOTerm("SBO:0000247")
+        model.getSpecies(met_id).setSBOTerm('SBO:0000247')
 
 
 def addSBOforGenes(model):
     # add genes SBO
-    model_fbc = model.getPlugin("fbc")
+    model_fbc = model.getPlugin('fbc')
     # if model has genes, not always given
     if model_fbc is not None:
         for gene in model_fbc.getListOfGeneProducts():
-            gene.setSBOTerm("SBO:0000243")
+            gene.setSBOTerm('SBO:0000243')
 
 
 def addSBOforModel(doc, modelType):
     'Add SBO Term to define the underlying modelling framework'
     if modelType == 'constraint-based':
-        doc.setSBOTerm("SBO:0000693")
+        doc.setSBOTerm('SBO:0000693')
     elif modelType == 'logical':
-        doc.setSBOTerm("SBO:0000234")
+        doc.setSBOTerm('SBO:0000234')
     elif modelType == 'continuous':
-        doc.setSBOTerm("SBO:0000062")
+        doc.setSBOTerm('SBO:0000062')
     elif modelType == 'discrete':
-        doc.setSBOTerm("SBO:0000063")
+        doc.setSBOTerm('SBO:0000063')
     elif modelType == 'hybrid':
-        doc.setSBOTerm("SBO:0000681")
+        doc.setSBOTerm('SBO:0000681')
     elif modelType == 'logical':
-        doc.setSBOTerm("SBO:0000234")
+        doc.setSBOTerm('SBO:0000234')
     else:
-        doc.setSBOTerm("SBO_0000004")
+        doc.setSBOTerm('SBO_0000004')
 
 
 def addSBOforGroups(model):
-    mplugin = model.getPlugin("groups")
+    mplugin = model.getPlugin('groups')
     # if groups are in model defined
     if mplugin is not None:
         for grp in mplugin.getListOfGroups():
-            grp.setSBOTerm("SBO:0000633")
+            grp.setSBOTerm('SBO:0000633')
 
 
 def addSBOforParameters(model):
     for param in model.getListOfParameters():
         # reaction bounds
         if 'R_' in param.getId():
-            param.setSBOTerm("SBO:0000625")
+            param.setSBOTerm('SBO:0000625')
         # default set bounds
         else:
-            param.setSBOTerm("SBO:0000626")
+            param.setSBOTerm('SBO:0000626')
 
 
 def addSBOforCompartments(model):
     for cmp in model.getListOfCompartments():
-        cmp.setSBOTerm("SBO:0000290")
+        cmp.setSBOTerm('SBO:0000290')
 
 
 def write_to_file(model, new_filename):
@@ -597,7 +599,7 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
     addSBOforCompartments(model_libsbml)
 
     write_to_file(model_libsbml, new_filename)
-    print("\nModel with SBO Annotations written to " + new_filename, " ...")
+    print(f'\nModel with SBO Annotations written to {new_filename} ...')
 
     # close database connection
     cur.close()
@@ -607,7 +609,7 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
 
 
 def printCounts(model_sbml):
-    model_fbc = model_sbml.getPlugin("fbc")
+    model_fbc = model_sbml.getPlugin('fbc')
 
     # count assigned SBO
     SBO_rxns, SBO_genes, SBO_mets, SBO_comps = [], [], [], []

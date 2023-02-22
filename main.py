@@ -1,31 +1,38 @@
 from SBOannotator import *
 from libsbml import *
+import time
 
-doc = readSBML("models/RECON1.xml")
+start = time.time()
+
+doc = readSBML('models/BiGG_Models/RECON1.xml')
 model = doc.getModel()
 
 print('-----------------------------')
 print('SBO before: ')
 print('-----------------------------')
-print('Reactions:', printCounts(model)[0])
-print('\nMetabolites:', printCounts(model)[1])
-print('\nGenes:', printCounts(model)[2])
-print('\nCompartments:', printCounts(model)[3])
+print(f'Reactions: {printCounts(model)[0]}')
+print(f'\nMetabolites: {printCounts(model)[1]}')
+print(f'\nGenes: {printCounts(model)[2]}')
+print(f'\nCompartments: {printCounts(model)[3]}')
+
 
 sbo_annotator(doc, model, 'constraint-based', True, 'create_dbs', 'models/Annotated_Models/'+model.getId()+'_SBOannotated.xml')
 
 print('-----------------------------')
 print('SBO after: ')
 print('-----------------------------')
-print('Reactions:', printCounts(model)[0])
-print('\nMetabolites:', printCounts(model)[1])
-print('\nGenes:', printCounts(model)[2])
-print('\nCompartments:', printCounts(model)[3])
+print(f'Reactions: {printCounts(model)[0]}')
+print(f'\nMetabolites: {printCounts(model)[1]}')
+print(f'\nGenes: {printCounts(model)[2]}')
+print(f'\nCompartments: {printCounts(model)[3]}')
 
 
 # counter-check which reactions remained without SBO annotation
 for r in model.reactions:
     if r.isSetSBOTerm() is False:
         print('\n*********************')
-        print('No SBO set for reactions: ', r.getId())
+        print(f'No SBO set for reactions: {r.getId()}')
         print('\n*********************')
+
+end = time.time()
+print(f'SBOannotator done after:  {end - start}s')
