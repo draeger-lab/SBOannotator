@@ -18,7 +18,7 @@ setup(
                       'python-collection',
                       'requests',
                       'pypi-json'],
-    packages=['models', 'main'],
+    packages=['models'],
     py_modules=['SBOannotator', 'main'],
     package_data={'': ['create_dbs.sql']},
     include_package_data=True,
