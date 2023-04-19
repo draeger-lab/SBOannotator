@@ -36,7 +36,7 @@ pip install SBOannotator
 
 This tool has the following dependencies:
 
-python 3.8.5
+python >=3.8.5
 
 Packages:
 * sqlite3

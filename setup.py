@@ -14,13 +14,15 @@ setup(
     author_email='nantia.leonidou@uni-tuebingen.de',
     license=' GPL-3.0',
     keywords=['SBOannotator', 'SBO Terms', 'automated tool'],
-    packages=find_packages(where='SBOannotator', include=['SBOannotator', 'main']),
+    packages=['SBOannotator'],
     install_requires=['python-libsbml',
                       'python-collection',
                       'requests',
                       'pypi-json'],
     classifiers=[
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Software Development :: Version Control :: Git",
         "Operating System :: MacOS",
         "Operating System :: Unix"
