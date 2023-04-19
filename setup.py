@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='SBOannotator',
-    version='2.0',
+    version='2.1',
     description='SBOannotator: A Python tool for the automated assignment of Systems Biology Ontology terms',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -18,6 +18,10 @@ setup(
                       'python-collection',
                       'requests',
                       'pypi-json'],
+    packages=['models', 'main'],
+    py_modules=['SBOannotator', 'main'],
+    package_data={'': ['create_dbs.sql']},
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
