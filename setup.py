@@ -5,7 +5,6 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='SBOannotator',
-    version='2.0.4',
     description='SBOannotator: A Python tool for the automated assignment of Systems Biology Ontology terms',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -14,7 +13,6 @@ setup(
     author_email='nantia.leonidou@uni-tuebingen.de',
     license=' GPL-3.0',
     keywords=['SBOannotator', 'SBO Terms', 'automated tool'],
-    packages=['SBOannotator'],
     install_requires=['python-libsbml',
                       'python-collection',
                       'requests',
