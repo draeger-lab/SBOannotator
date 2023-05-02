@@ -13,7 +13,7 @@ DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_']
 SINK_IDS = ['_SK_', '_SINK_', '_sink_']
 EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_']
 BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH']
-
+RXN_BOUND_PARAMETERS = ["cobra_default_lb","cobra_default_ub","cobra_0_bound","minus_inf","plus_inf"]
 
 def getCompartmentlessSpeciesId(speciesReference):
     speciesId = speciesReference.getSpecies()
@@ -213,6 +213,9 @@ def callForECAnnot(model):
 
         except:
             react.setSBOTerm('SBO:0000176')
+
+    # return annotated model
+    return model
 
 
 def splitTransportBiochem(react):
@@ -511,9 +514,21 @@ def addSBOforParameters(model):
         # reaction bounds
         if 'R_' in param.getId():
             param.setSBOTerm('SBO:0000625')
-        # default set bounds
-        else:
+        # default values for bounds
+        elif param.getId() in RXN_BOUND_PARAMETERS:
             param.setSBOTerm('SBO:0000626')
+        # length
+        elif 'length' in param.getId() or 'Length' in param.getId():
+            param.setSBOTerm('SBO:0000466')
+        # area
+        elif 'area' in param.getId() or 'Area' in param.getId():
+            param.setSBOTerm('SBO:0000467')
+        # volume
+        elif 'volume' in param.getId() or 'Volume' in param.getId():
+            param.setSBOTerm('SBO:0000468')
+        # any parameter
+        else:
+            param.setSBOTerm('SBO: 0000545')
 
 
 def addSBOforCompartments(model):
@@ -526,7 +541,7 @@ def write_to_file(model, new_filename):
     writeSBMLToFile(new_document, new_filename)
 
 
-def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name, new_filename):
+def sbo_annotator(doc, model_libsbml, modelType, modelAnnotated, database_name, new_filename):
     """
     Main function to run SBOannotator
 
@@ -534,7 +549,7 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
         doc: SBML document
         model_libsbml (libsbml-model): input model (unannotated)
         modelType (str): type of modelling framework
-        model_annotated (boolean): True, if model already includes annotations with EC numbers
+        modelAnnotated (boolean): True, if model already includes annotations with EC numbers
         database_name (str): name of imported database, without extension
         new_filename (str): file name for output model
     Output:
@@ -549,9 +564,9 @@ def sbo_annotator(doc, model_libsbml, modelType, model_annotated, database_name,
         cur.executescript(schema.read())
 
     # model is already annotated?
-    if not model_annotated:
+    if not modelAnnotated:
         print('Model is not annotated. Use API call ... ')
-        callForECAnnot(model_libsbml)
+        model_libsbml = callForECAnnot(model_libsbml)
 
     for reaction in model_libsbml.reactions:
         if not addSBOfromDB(reaction, cur):
