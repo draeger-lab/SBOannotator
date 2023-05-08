@@ -13,7 +13,8 @@ DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_']
 SINK_IDS = ['_SK_', '_SINK_', '_sink_']
 EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_']
 BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH']
-RXN_BOUND_PARAMETERS = ["cobra_default_lb","cobra_default_ub","cobra_0_bound","minus_inf","plus_inf"]
+RXN_BOUND_PARAMETERS = ["cobra_default_lb", "cobra_default_ub", "cobra_0_bound", "minus_inf", "plus_inf"]
+
 
 def getCompartmentlessSpeciesId(speciesReference):
     speciesId = speciesReference.getSpecies()
@@ -536,6 +537,12 @@ def addSBOforCompartments(model):
         cmp.setSBOTerm('SBO:0000290')
 
 
+def addSBOforRateLaw(model):
+    for r in model.reactions:
+        if r.getKineticLaw():
+            r.getKineticLaw().setSBOTerm('SBO:0000001')
+
+
 def write_to_file(model, new_filename):
     new_document = model.getSBMLDocument()
     writeSBMLToFile(new_document, new_filename)
@@ -612,6 +619,8 @@ def sbo_annotator(doc, model_libsbml, modelType, modelAnnotated, database_name, 
     addSBOforParameters(model_libsbml)
 
     addSBOforCompartments(model_libsbml)
+
+    addSBOforRateLaw(model_libsbml)
 
     write_to_file(model_libsbml, new_filename)
     print(f'\nModel with SBO Annotations written to {new_filename} ...')
