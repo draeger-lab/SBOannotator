@@ -543,6 +543,16 @@ def addSBOforRateLaw(model):
             r.getKineticLaw().setSBOTerm('SBO:0000001')
 
 
+def addSBOforEvents(model):
+    if model.getListOfEvents() is not None:
+        for event in model.getListOfEvents():
+            event.setSBOTerm('SBO:0000231')
+            if event.getTrigger() is not None:
+                event.getTrigger().setSBOTerm('SBO:0000171')
+            if event.getDelay() is not None:
+                event.getDelay().setSBOTerm('SBO:0000225')
+
+
 def write_to_file(model, new_filename):
     new_document = model.getSBMLDocument()
     writeSBMLToFile(new_document, new_filename)
@@ -621,6 +631,8 @@ def sbo_annotator(doc, model_libsbml, modelType, modelAnnotated, database_name, 
     addSBOforCompartments(model_libsbml)
 
     addSBOforRateLaw(model_libsbml)
+
+    addSBOforEvents(model_libsbml)
 
     write_to_file(model_libsbml, new_filename)
     print(f'\nModel with SBO Annotations written to {new_filename} ...')
