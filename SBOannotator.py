@@ -9,9 +9,9 @@ import requests
 import json
 
 # define globals
-DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_']
-SINK_IDS = ['_SK_', '_SINK_', '_sink_']
-EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_']
+DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_','Demand_']
+SINK_IDS = ['_SK_', '_SINK_', '_sink_', 'Sink_']
+EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_', 'Exchange_']
 BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH', 'Growth']
 RXN_BOUND_PARAMETERS = ["cobra_default_lb", "cobra_default_ub", "cobra_0_bound", "minus_inf", "plus_inf"]
 
