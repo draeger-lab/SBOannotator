@@ -12,7 +12,7 @@ import json
 DEMAND_IDS = ['_DM_', '_DEMAND_', '_demand_']
 SINK_IDS = ['_SK_', '_SINK_', '_sink_']
 EXCHANGE_IDS = ['_EX_', '_EXCHANGE_', '_exchange_']
-BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH']
+BIOMASS_IDS = ['BIOMASS', 'biomass', 'growth', 'GROWTH', 'Growth']
 RXN_BOUND_PARAMETERS = ["cobra_default_lb", "cobra_default_ub", "cobra_0_bound", "minus_inf", "plus_inf"]
 
 
