@@ -136,9 +136,9 @@ dmypy.json
 ~$*
 /create_dbs
 /main_app.py
-/templates/
 /uploads/
-/static/
 /sbo_database
 /dist2/
 /dist/
+/static/
+/templates/
