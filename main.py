@@ -4,8 +4,7 @@ import time
 
 start = time.time()
 
-#doc = readSBML('models/BiGG_Models/RECON1.xml')
-doc = readSBML('/Users/leonidou/Downloads/BIOMD0000000497_url.xml')
+doc = readSBML('models/BiGG_Models/RECON1.xml')
 model = doc.getModel()
 
 print('-----------------------------')
