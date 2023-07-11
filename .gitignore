@@ -135,6 +135,10 @@ dmypy.json
 .DS_Store
 ~$*
 /create_dbs
+/main_app.py
+/templates/
+/uploads/
+/static/
 /sbo_database
 /dist2/
 /dist/
