@@ -136,7 +136,7 @@ dmypy.json
 ~$*
 /create_dbs
 main_app.py
-app.py
+*app.py
 /uploads/
 /sbo_database
 /dist2/
