@@ -6,10 +6,13 @@
 [![License (LGPL version 3)](https://img.shields.io/badge/license-LGPLv3.0-blue.svg?style=plastic)](http://opensource.org/licenses/LGPL-3.0)
 [![Latest version](https://img.shields.io/badge/Latest_version-0.9-brightgreen.svg?style=plastic)](https://github.com/draeger-lab/SBOannotator/releases/)
 ![Code Size](https://img.shields.io/github/languages/code-size/draeger-lab/SBOannotator.svg?style=plastic)
-![Downloads of all releases](https://img.shields.io/github/downloads/draeger-lab/SBOannotator/total.svg?style=plastic)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/draeger-lab/SBOannotator/main)
+[![PyPI version](https://badge.fury.io/py/SBOannotator.svg)](https://badge.fury.io/py/SBOannotator)
+![PyPI - Format](https://img.shields.io/pypi/format/SBOannotator)
+[![PyPI downloads](https://img.shields.io/pypi/dm/SBOannotator.svg)](https://pypistats.org/packages/SBOannotator)
 [![DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202012.0296.v1-blue.svg?style=plastic)](https://www.preprints.org/manuscript/202302.0317/v1)
 
-*Authors* : Elisabeth Fritze & [Nantia Leonidou](https://github.com/NantiaL)
+*Developers* : [Nantia Leonidou](https://github.com/NantiaL) & Elisabeth Fritze
 ___________________________________________________________________________________________________________
 
 ### How to cite the SBOannotator?
