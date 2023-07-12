@@ -1,4 +1,4 @@
-__author__ = 'Elisabeth Fritze & Nantia Leonidou'
+__author__ = 'Nantia Leonidou & Elisabeth Fritze'
 
 """ SBOannotator: a Python tool for the automated assignment of Systems Biology Ontology terms """
 
@@ -652,4 +652,5 @@ def printCounts(model_sbml):
     SBO_mets = [m.getSBOTermID() for m in model_sbml.species]
     SBO_genes = [g.getSBOTermID() for g in model_fbc.getListOfGeneProducts() if model_fbc is not None]
     SBO_comps = [c.getSBOTermID() for c in model_sbml.compartments]
+
     return Counter(SBO_rxns), Counter(SBO_mets), Counter(SBO_genes), Counter(SBO_comps)
