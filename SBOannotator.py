@@ -649,18 +649,7 @@ def printCounts(model_sbml):
 
     # count assigned SBO
     SBO_rxns = [r.getSBOTermID() for r in model_sbml.reactions]
-    SBO_genes = [g.getSBOTermID() for g in model_fbc.getListOfGeneProducts() if model_fbc is not None]
     SBO_mets = [m.getSBOTermID() for m in model_sbml.species]
+    SBO_genes = [g.getSBOTermID() for g in model_fbc.getListOfGeneProducts() if model_fbc is not None]
     SBO_comps = [c.getSBOTermID() for c in model_sbml.compartments]
-    # SBO_rxns, SBO_genes, SBO_mets, SBO_comps = [], [], [], []
-    # for r in model_sbml.reactions:
-    #     SBO_rxns.append(r.getSBOTermID())
-    # for m in model_sbml.species:
-    #     SBO_mets.append(m.getSBOTermID())
-    # if model_fbc is not None:
-    #     for g in model_fbc.getListOfGeneProducts():
-    #         SBO_genes.append(g.getSBOTermID())
-    # for c in model_sbml.compartments:
-    #     SBO_comps.append(c.getSBOTermID())
-
     return Counter(SBO_rxns), Counter(SBO_mets), Counter(SBO_genes), Counter(SBO_comps)
