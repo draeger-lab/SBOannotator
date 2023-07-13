@@ -29,6 +29,8 @@ Pseudo-reactions that serve modeling purposes are given reasonable terms to dist
 import or export of metabolites. Finally, other model entities, such as metabolites and genes, are annotated with appropriate terms. 
 Including SBO annotations in the models will enhance the reproducibility, usability, and analysis of biochemical networks.
 
+### Web Application
+TBA
 
 ### Installation
 ```
