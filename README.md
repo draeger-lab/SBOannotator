@@ -17,7 +17,7 @@ ________________________________________________________________________________
 
 ### How to cite the SBOannotator?
 
-The online version of the SBOannotator is described in this article: https://www.preprints.org/manuscript/202302.0317/v1
+The online version of the SBOannotator is described in this article: https://doi.org/10.1093/bioinformatics/btad437
 
 ### Overview
 The SBOannotator is the first standalone tool that automatically assigns SBO terms to multiple entities of a given SBML model, 
