@@ -29,7 +29,7 @@ import or export of metabolites. Finally, other model entities, such as metaboli
 Including SBO annotations in the models will enhance the reproducibility, usability, and analysis of biochemical networks.
 
 ### Web Application
-TBA
+Web application accessible at [TueVis](sbo-annotator-tuevis.cs.uni-tuebingen.de/)
 
 ### Installation
 ```
