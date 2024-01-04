@@ -496,8 +496,6 @@ def addSBOforModel(doc, modelType):
         doc.setSBOTerm('SBO:0000063')
     elif modelType == 'hybrid':
         doc.setSBOTerm('SBO:0000681')
-    elif modelType == 'logical':
-        doc.setSBOTerm('SBO:0000234')
     else:
         doc.setSBOTerm('SBO_0000004')
 
