@@ -604,7 +604,7 @@ def sbo_annotator(doc, model_libsbml, modelType, modelAnnotated, database_name, 
                 checkActiveTransport(reaction)
                 if reaction.getSBOTermID() != 'SBO:0000657':  # if not active
                     checkCoTransport(reaction)
-                    if reaction.getSBOTermID() != 'SBO:0000654':  # if not co-transport
+                    if reaction.getSBOTermID() == 'SBO:0000654':  # if not co-transport
                         splitSymAntiPorter(reaction)
             # if metabolic reaction
             if reaction.getSBOTermID() == 'SBO:0000176':
