@@ -9,7 +9,7 @@
 [![PyPI version](https://badge.fury.io/py/SBOannotator.svg)](https://badge.fury.io/py/SBOannotator)
 ![PyPI - Format](https://img.shields.io/pypi/format/SBOannotator)
 [![PyPI downloads](https://img.shields.io/pypi/dm/SBOannotator.svg)](https://pypistats.org/packages/SBOannotator)
-[![DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202012.0296.v1-blue.svg?style=plastic)](https://doi.org/10.1093/bioinformatics/btad437)
+[![DOI](https://img.shields.io/badge/DOI-10.1093%2Fbioinformatics%2Fbtad437-blue.svg?style=plastic)](https://doi.org/10.1093/bioinformatics/btad437)
 
 *Developers* : [Nantia Leonidou](https://github.com/NantiaL) & Elisabeth Fritze
 ___________________________________________________________________________________________________________
