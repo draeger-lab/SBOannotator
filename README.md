@@ -66,10 +66,8 @@ Types of modelling framework accepted:
 - hybrid
 - logical
 
-
 ### Outputs
-+ `model_libsbml`: Annotated libsbml model
-  
++ `model_libsbml`: Annotated libSBML model
 
 ### Usage
 To run SBOannotator use the `main.py` script and modify the parameters in the `readSBML` and `sbo_annotator` 
