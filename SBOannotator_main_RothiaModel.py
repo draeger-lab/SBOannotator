@@ -6,7 +6,7 @@ import time
 
 start = time.time()
 
-doc = readSBML('models/BiGG_Models/RECON1.xml')
+doc = readSBML('/Users/leonidou/Nextcloud/Belgium_internship_Rothia_mucilaginosa/Computer_modeling/05_after_MCC.xml')
 model = doc.getModel()
 
 print('-----------------------------')
@@ -18,7 +18,7 @@ print(f'\nGenes: {printCounts(model)[2]}')
 print(f'\nCompartments: {printCounts(model)[3]}')
 
 
-sbo_annotator(doc, model, 'constraint-based', True, 'create_dbs', 'models/Annotated_Models/'+model.getId()+'_SBOannotated.xml')
+sbo_annotator(doc, model, 'constraint-based', True, 'create_dbs', '/Users/leonidou/Nextcloud/Belgium_internship_Rothia_mucilaginosa/Computer_modeling/SBOannotator_output/'+model.getId()+'_SBOannotated.xml')
 
 print('-----------------------------')
 print('SBO after: ')
