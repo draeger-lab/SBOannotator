@@ -9,17 +9,17 @@
 [![PyPI version](https://badge.fury.io/py/SBOannotator.svg)](https://badge.fury.io/py/SBOannotator)
 ![PyPI - Format](https://img.shields.io/pypi/format/SBOannotator)
 [![PyPI downloads](https://img.shields.io/pypi/dm/SBOannotator.svg)](https://pypistats.org/packages/SBOannotator)
-[![DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202012.0296.v1-blue.svg?style=plastic)](https://www.preprints.org/manuscript/202302.0317/v1)
+[![DOI](https://img.shields.io/badge/DOI-10.1093%2Fbioinformatics%2Fbtad437-blue.svg?style=plastic)](https://doi.org/10.1093/bioinformatics/btad437)
 
 *Developers* : [Nantia Leonidou](https://github.com/NantiaL) & Elisabeth Fritze
 ___________________________________________________________________________________________________________
 
 ### How to cite the SBOannotator?
 
-The online version of the SBOannotator is described in this article: https://doi.org/10.1093/bioinformatics/btad437
+The SBOannotator is described in this article: https://doi.org/10.1093/bioinformatics/btad437
 
 ### Overview
-The SBOannotator is the first standalone tool that automatically assigns SBO terms to multiple entities of a given SBML model, 
+SBOannotator is the first standalone tool that automatically assigns SBO terms to multiple entities of a given SBML model, 
 The main focus lies on the reactions, as the correct assignment of precise SBO annotations requires their extensive classification. 
 Our implementation does not consider only top-level terms but examines the functionality of the underlying enzymes to 
 allocate precise and highly specific ontology terms to biochemical reactions. 
@@ -29,7 +29,7 @@ import or export of metabolites. Finally, other model entities, such as metaboli
 Including SBO annotations in the models will enhance the reproducibility, usability, and analysis of biochemical networks.
 
 ### Web Application
-TBA
+Web application hosted at [TueVis](https://tuevis.cs.uni-tuebingen.de/sboannotator/) is accessible and ready to use at [sbo-annotator-tuevis.cs.uni-tuebingen.de/](https://sbo-annotator-tuevis.cs.uni-tuebingen.de/)
 
 ### Installation
 ```
@@ -66,10 +66,8 @@ Types of modelling framework accepted:
 - hybrid
 - logical
 
-
 ### Outputs
-+ `model_libsbml`: Annotated libsbml model
-  
++ `model_libsbml`: Annotated libSBML model
 
 ### Usage
 To run SBOannotator use the `main.py` script and modify the parameters in the `readSBML` and `sbo_annotator` 
@@ -78,7 +76,7 @@ functions as wished.
 If ERROR occurs, check the current version of Python: 
 
 - `python --version'`
-- `conda install python=3.8.5`
+- `conda install python>=3.8.5`
 
 ### Exemplary models and Results
 The folder `models/BiGG_Models` contains all the tested models as they were downloaded from
