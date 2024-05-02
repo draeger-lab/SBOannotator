@@ -135,6 +135,7 @@ dmypy.json
 
 # other
 SBOannotator_main_RothiaModel.py
+testSQL.py
 .DS_Store
 ~$*
 /create_dbs

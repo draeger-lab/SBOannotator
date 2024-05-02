@@ -411,6 +411,7 @@ def checkDeamination(react):
 
 
 def addSBOviaEC(react, cur):
+    # cur.execute(): case insensitive
     if len(getECNums(react)) == 1:
         ECnum = getECNums(react)[0]
         splittedEC = ECnum.split('.')
