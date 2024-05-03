@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='SBOannotator',
-    version='2.1.2',
+    version='2.2.2',
     description='SBOannotator: A Python tool for the automated assignment of Systems Biology Ontology terms',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/draeger-lab/SBOannotator',
     author='Nantia Leonidou, Elisabeth Fritze, Alina Renz, Andreas Dräger',
     author_email='nantia.leonidou@uni-tuebingen.de',
-    license=' GPL-3.0',
+    license='GPL-3.0',
     keywords=['SBOannotator', 'SBO Terms', 'automated tool'],
     install_requires=['python-libsbml',
                       'python-collection',
@@ -22,7 +22,7 @@ setup(
     py_modules=['SBOannotator', 'main'],
     include_package_data=True,
     package_data={
-        'create_dbs.sql': ['SBOannotator/'],
+        'SBOannotator': ['create_dbs.sql'],
     },
     classifiers=[
         "Programming Language :: Python :: 3.8",
