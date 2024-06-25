@@ -4,7 +4,7 @@
 **SBOannotator: a Python tool for the automated assignment of Systems Biology Ontology terms**
 
 [![License (LGPL version 3)](https://img.shields.io/badge/license-LGPLv3.0-blue.svg?style=plastic)](http://opensource.org/licenses/LGPL-3.0)
-[![Latest version](https://img.shields.io/badge/Latest_version-0.9-brightgreen.svg?style=plastic)](https://github.com/draeger-lab/SBOannotator/releases/)
+[![Latest version](https://img.shields.io/badge/Latest_version-3.0.1-brightgreen.svg?style=plastic)](https://github.com/draeger-lab/SBOannotator/releases/)
 ![Code Size](https://img.shields.io/github/languages/code-size/draeger-lab/SBOannotator.svg?style=plastic)
 [![PyPI version](https://badge.fury.io/py/SBOannotator.svg)](https://badge.fury.io/py/SBOannotator)
 ![PyPI - Format](https://img.shields.io/pypi/format/SBOannotator)
