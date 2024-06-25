@@ -140,7 +140,7 @@ testSQL.py
 MANIFEST.in
 .DS_Store
 ~$*
-/create_dbs
+/src/sboannotator/create_dbs
 /uploads/
 /sbo_database
 /dist2/

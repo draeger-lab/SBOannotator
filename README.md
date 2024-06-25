@@ -11,7 +11,7 @@
 [![PyPI downloads](https://img.shields.io/pypi/dm/SBOannotator.svg)](https://pypistats.org/packages/SBOannotator)
 [![DOI](https://img.shields.io/badge/DOI-10.1093%2Fbioinformatics%2Fbtad437-blue.svg?style=plastic)](https://doi.org/10.1093/bioinformatics/btad437)
 
-*Developers* : [Nantia Leonidou](https://github.com/NantiaL) & Elisabeth Fritze
+Developers : [Nantia Leonidou](https://github.com/NantiaL) & Elisabeth Fritze
 ___________________________________________________________________________________________________________
 
 ### How to cite the SBOannotator?
