@@ -1,5 +1,5 @@
 # SBOannotator
-<img align="right" src="SBOannotator_logo.png" alt="drawing" width="200"/>
+<img align="right" src="SBOannotator_logo.png" alt="drawing" width="250"/>
 
 **SBOannotator: a Python tool for the automated assignment of Systems Biology Ontology terms**
 
@@ -54,7 +54,6 @@ Packages:
 + `doc`: an SBML document
 + `model_libsbml`: SBML model of interest
 + `modelType`: type of modelling framework (see below)
-+ `modelAnnotated`: True, if model already includes annotations with EC numbers
 + `database_name`: name of imported database, without extension
 + `new_filename`: file name for output model
 
