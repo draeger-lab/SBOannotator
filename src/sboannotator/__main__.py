@@ -1,6 +1,7 @@
 __author__ = 'Nantia Leonidou'
 
-from sboannotator import *
+#from sboannotator import *
+from SBOannotator import *
 from libsbml import *
 import time
 
