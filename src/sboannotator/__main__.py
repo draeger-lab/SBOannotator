@@ -1,6 +1,6 @@
 __author__ = 'Nantia Leonidou'
 
-from SBOannotator import *
+from sboannotator import *
 from libsbml import *
 import time
 
@@ -37,4 +37,4 @@ for r in model.reactions:
         print('\n*********************')
 
 end = time.time()
-print(f'\n🕑\033[31;40m SBOannotator done after:  {end - start} sec \033[0m')
+print(f'\n🕑\033[32;40m SBOannotator done after:  {end - start} sec \033[0m')

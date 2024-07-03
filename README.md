@@ -69,8 +69,10 @@ Types of modelling framework accepted:
 + `model_libsbml`: Annotated libSBML model
 
 ### Usage
-To run SBOannotator use the `main.py` script and modify the parameters in the `readSBML` and `sbo_annotator` 
+To run SBOannotator use the `__main__.py` script and modify the parameters in the `readSBML` and `sbo_annotator` 
 functions as wished.
+
+Alternatively run `python __main__.py` in the command line within the project folder.
 
 If ERROR occurs, check the current version of Python: 
 
