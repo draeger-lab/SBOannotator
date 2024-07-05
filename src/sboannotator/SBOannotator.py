@@ -144,7 +144,7 @@ def getECNums(react):
     ECNums = []
     for line in lines:
         if 'ec-code' in line:
-            ECNums.append(line.split('ec-code')[1][1:])
+            ECNums.append(line.split('ec-code')[1][1:][:-3])
     return ECNums
 
 
