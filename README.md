@@ -79,7 +79,7 @@ If ERROR occurs, check the current version of Python:
 - `python --version'`
 - `conda install python>=3.8.5`
 
-### Exemplary models and Results
+### Exemplary models and results
 The folder `models/BiGG_Models` contains all the tested models as they were downloaded from
 the BiGG database. 
 The annotated models after using the SBOannotator are listed in the folder named `models/Annotated_Models`.

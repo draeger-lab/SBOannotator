@@ -537,7 +537,7 @@ def sbo_annotator(doc, model_libsbml, modelType, database_name, new_filename):
                 checkPhosphorylation(reaction)
 
     # If rxns still have general SBO term, assign more specific terms via EC numbers
-    print('\nAssign SBO terms via E.C. numbers: \n')
+    print('\nAssign SBO terms via E.C. numbers... \n')
     for reaction in tqdm(model_libsbml.reactions):
 
         if reaction.getSBOTermID() == 'SBO:0000176':
