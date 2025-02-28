@@ -19,7 +19,7 @@ ________________________________________________________________________________
 The SBOannotator is described in this article: https://doi.org/10.1093/bioinformatics/btad437
 
 ### Overview
-SBOannotator is the first standalone tool that automatically assigns SBO terms to multiple entities of a given SBML model, 
+SBOannotator is the first standalone tool that automatically assigns SBO terms to multiple entities of a given SBML model. 
 The main focus lies on the reactions, as the correct assignment of precise SBO annotations requires their extensive classification. 
 Our implementation does not consider only top-level terms but examines the functionality of the underlying enzymes to 
 allocate precise and highly specific ontology terms to biochemical reactions. 
