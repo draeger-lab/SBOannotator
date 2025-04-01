@@ -4,7 +4,7 @@ This module provides a template management system for loading and rendering
 prompt templates used in LLM-based annotation.
 """
 
-__author__ = 'Your Name'
+__author__ = 'Jiahui Hu'
 
 import os
 import json
