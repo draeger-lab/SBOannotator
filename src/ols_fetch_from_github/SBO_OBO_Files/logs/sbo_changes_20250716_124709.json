@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-07-16T12:47:09.437273",
+  "old_version": null,
+  "new_version": {
+    "sha": "2143b2973f8912db9d4324a4fe543aabcd8f8ba7",
+    "last_modified": "2023-05-16T11:09:19Z",
+    "message": "Update SBO_OBO.obo\n\nChanged definition of cleavage as per request #4",
+    "author": "krish193",
+    "url": "https://github.com/EBI-BioModels/SBO/commit/2143b2973f8912db9d4324a4fe543aabcd8f8ba7"
+  },
+  "summary": {
+    "terms_added": 0,
+    "terms_deleted": 0,
+    "terms_updated": 1,
+    "typedefs_added": 0,
+    "typedefs_deleted": 0,
+    "typedefs_updated": 0,
+    "header_updated": false
+  },
+  "changes": {
+    "header_changes": {},
+    "term_changes": {
+      "added": [],
+      "deleted": [],
+      "updated": [
+        {
+          "obo_id": "SBO:0000178",
+          "label": "cleavage",
+          "description": "Rupture of a covalent bond resulting in the conversion of one physical entity into several physical entities or into a physical entity of a different topological class.",
+          "parents": [
+            {
+              "parent_id": "SBO:0000182",
+              "parent_label": "conversion"
+            }
+          ],
+          "change_type": "update",
+          "field_changes": {
+            "comment": {
+              "action": "updated",
+              "old_value": "Rupture of a covalent bond resulting in the conversion of one physical entity into several physical entities.",
+              "new_value": "Rupture of a covalent bond resulting in the conversion of one physical entity into several physical entities or into a physical entity of a different topological class."
+            }
+          },
+          "old_values": {
+            "label": "cleavage",
+            "description": "Rupture of a covalent bond resulting in the conversion of one physical entity into several physical entities.",
+            "parents": [
+              {
+                "parent_id": "SBO:0000182",
+                "parent_label": "conversion"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "typedef_changes": {
+      "added": [],
+      "deleted": [],
+      "updated": []
+    }
+  }
+}

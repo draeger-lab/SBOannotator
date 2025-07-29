@@ -1,0 +1,69 @@
+ Overview
+
+  Enhanced version of SBOannotator that adds unified database adapter functionality to improve EC number annotation coverage by querying multiple biological databases.
+
+  Key Differences
+
+  1. adapter.py (New File)
+
+  Purpose: Implements adapter pattern for querying biological databases to obtain EC numbers.
+
+  Key Components:
+  - EnzymeDataAdapter: Abstract base class defining the adapter interface
+  - KEGGAdapter: Queries KEGG REST API for EC numbers using reaction IDs
+  - BiGGAdapter: Queries BiGG universal reactions database
+  - UnifiedEnzymeDataProvider: Coordinates all adapters and deduplicates results
+  - callForECAnnotRxnUnified(): Main function that integrates with original SBOannotator
+
+  2. SBOannotatorEnhancedClass.py vs SBOannotator.py
+
+  Single Key Difference: Line 94 replaces the original logic with:
+  callForECAnnotRxnUnified(reaction)  # Enhanced: query multiple databases
+
+  Functionality:  the enhanced version queries BiGG and KEGG APIs to find EC numbers, then applies appropriate SBO terms.
+
+  3. main.py Modifications
+
+  Changes:
+  - Runs both original and enhanced annotation workflows on the same model
+  - Compares results between the two approaches
+  - Shows performance timing for both methods
+
+  How to Run
+
+  cd /Users/lareinahu/Documents/2025_gsoc/SBOannotator/SBOannotator/src/sboannotator
+  python __main__.py
+
+  Requirements:
+  - Internet connection (for API calls to BiGG and KEGG)
+  - requests, tqdm, libsbml packages
+
+  Expected Results
+
+  1. First Round (Original SBOannotator)
+
+  - Displays SBO term statistics before annotation
+  - Shows SBO term counts after original annotation
+  - Lists reactions that remain unannotated
+  - Reports execution time
+
+  2. Second Round (Enhanced SBOannotator)
+
+  - Runs enhanced version with API-based EC number lookup
+  - Displays final SBO term statistics
+  - Reports enhanced version execution time
+
+  3. Output Files
+
+  - RECON1_SBOannotated.xml: Annotated SBML model saved to ../../models/Annotated_Models/
+
+  4. Performance Comparison
+
+  - Time comparison between original and enhanced versions
+  - More reaction would be set to sbo: 0000176 using enhanced way
+
+
+
+
+  The enhanced system provides better metabolic reaction annotation by leveraging multiple biological databases when direct EC annotations are unavailable.
+

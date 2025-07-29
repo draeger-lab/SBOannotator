@@ -1,0 +1,28 @@
+{
+  "github": {
+    "url": "https://raw.githubusercontent.com/EBI-BioModels/SBO/refs/heads/master/SBO_OBO.obo",
+    "repo_owner": "EBI-BioModels",
+    "repo_name": "SBO",
+    "file_path": "SBO_OBO.obo",
+    "branch": "master"
+  },
+  "directories": {
+    "sbo_obo_files": "SBO_OBO_Files",
+    "localfiles": "localfiles",
+    "customerfile": "customerfile",
+    "logs": "logs"
+  },
+  "file_patterns": {
+    "sbo_obo_json": "SBO_OBO_*.json",
+    "timestamp_format": "%Y%m%d_%H%M%S",
+    "log_filename": "sbo_changes_{timestamp}.json"
+  },
+  "obo_conversion": {
+    "field_order": ["id", "name", "comment", "is_a"],
+    "typedef_field_order": ["id", "name", "is_transitive"]
+  },
+  "api": {
+    "github_api_base": "https://api.github.com",
+    "per_page": 1
+  }
+}

@@ -128227,7 +128227,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_26035_AT1"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT2g" sboTerm="SBO:0000217" id="R_GLCAT2g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT2g" sboTerm="SBO:0000176" id="R_GLCAT2g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT2g">
@@ -128260,7 +128260,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT3g" sboTerm="SBO:0000217" id="R_GLCAT3g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT3g" sboTerm="SBO:0000176" id="R_GLCAT3g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT3g">
@@ -128293,7 +128293,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT4g" sboTerm="SBO:0000217" id="R_GLCAT4g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT4g" sboTerm="SBO:0000176" id="R_GLCAT4g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT4g">
@@ -128464,7 +128464,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT5g" sboTerm="SBO:0000217" id="R_GLCAT5g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT5g" sboTerm="SBO:0000176" id="R_GLCAT5g" name="Chondroitin glucuronyltransferase II, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT5g">
@@ -128497,7 +128497,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT6g" sboTerm="SBO:0000217" id="R_GLCAT6g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT6g" sboTerm="SBO:0000176" id="R_GLCAT6g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT6g">
@@ -128532,7 +128532,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT7g" sboTerm="SBO:0000217" id="R_GLCAT7g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT7g" sboTerm="SBO:0000176" id="R_GLCAT7g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT7g">
@@ -128599,7 +128599,7 @@
           <speciesReference species="M_ppi_c" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="R_GLCAT8g" sboTerm="SBO:0000217" id="R_GLCAT8g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT8g" sboTerm="SBO:0000176" id="R_GLCAT8g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT8g">
@@ -128634,7 +128634,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLCAT9g" sboTerm="SBO:0000217" id="R_GLCAT9g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCAT9g" sboTerm="SBO:0000176" id="R_GLCAT9g" name="Heparan glucuronyltransferase II" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCAT9g">
@@ -128740,7 +128740,7 @@
           <speciesReference species="M_glc__D_r" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="R_GLCATg" sboTerm="SBO:0000217" id="R_GLCATg" name="UDP-D-glucuronate:galactosylgalactosylxylose glucuronosyltransferase, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLCATg" sboTerm="SBO:0000176" id="R_GLCATg" name="UDP-D-glucuronate:galactosylgalactosylxylose glucuronosyltransferase, Golgi apparatus" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLCATg">
@@ -183504,7 +183504,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_1376_AT1"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UDPGNP" sboTerm="SBO:0000217" id="R_UDPGNP" name="UDP-glucuronate glucuronohydrolase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UDPGNP" sboTerm="SBO:0000176" id="R_UDPGNP" name="UDP-glucuronate glucuronohydrolase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UDPGNP">
@@ -184441,7 +184441,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UGT1A5r2" sboTerm="SBO:0000217" id="R_UGT1A5r2" name="UDP-glucuronosyltransferase 1-10 precursor, microsomal (13-cis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UGT1A5r2" sboTerm="SBO:0000176" id="R_UGT1A5r2" name="UDP-glucuronosyltransferase 1-10 precursor, microsomal (13-cis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UGT1A5r2">
@@ -184723,7 +184723,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UGT1A9r" sboTerm="SBO:0000217" id="R_UGT1A9r" name="UDP-glucuronosyltransferase 1-10 precursor, microsomal" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UGT1A9r" sboTerm="SBO:0000176" id="R_UGT1A9r" name="UDP-glucuronosyltransferase 1-10 precursor, microsomal" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UGT1A9r">
