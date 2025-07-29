@@ -1,28 +1,53 @@
 
-# 📘 EC Comment Vectorization - README
+# 📘 EC & SBO Comment Vectorization - README
 
 ## 🧩 Overview
 
-This project provides a script `ec_vector.py` that vectorizes enzyme comment data using a pre-trained sentence embedding model from the [Sentence-Transformers](https://www.sbert.net/) library.
+This project provides scripts for vectorizing enzyme and sbo comment data using a pre-trained sentence embedding model from the [Sentence-Transformers](https://www.sbert.net/) library.
 
-The input is a CSV file containing EC numbers and their functional comments. The script filters and processes records that have non-empty comments, converts them into dense vector representations, and saves the results in multiple formats for further analysis, visualization, or machine learning tasks.
+- **`ec_vector.py`**: Vectorizes EC (Enzyme Commission) comment data
+- **`sbo_vector.py`**: Vectorizes SBO (Systems Biology Ontology) comment data
+
+Both scripts filter and process records that have non-empty comments, convert them into dense vector representations, and save the results in multiple formats for further analysis, visualization, or machine learning tasks.
 
 ---
 
-## 📂 Input
+## 📊 Data Sources
 
-The input CSV file must contain at least the following columns:
+### EC Data
+- **Source**: Downloaded from [ExploreEnz](https://www.enzyme-database.org/) database
+- **Processing**: Filtered in MySQL to include only EC entries with non-empty comments
+- **Input File**: `entry_with_comments_202507250622.csv`
 
+### SBO Data  
+- **Source**: Fetched from local sbo json file：SBO_OBO_20230516_110919.json
+- **Processing Scripts**: 
+  - `sbo_insert.py`: extracts SBO ontology terms from a JSON file, performs a depth-first search traversal starting from a root node, and generates SQL insert statements for database storage while verifying the results against ground truth data.
+  - `insert_sbo.json.sql`: SQL file containing INSERT statements for SBO terms with comments
+- **Input File**: `sbo_terms_202507292305.csv`
+
+---
+
+## 📂 Input Format
+
+### EC Data Input
+The EC input CSV file must contain the following columns:
 - `ec_num`: Enzyme Commission number (e.g., `"1.1.1.1"`)
 - `comments`: Descriptive comment text associated with the EC number
 
-📌 The dataset used in this script is **`entry_with_comments`**, which has already been filtered to include **only rows where `comments` is not null or empty**.
+### SBO Data Input
+The SBO input CSV file contain the following columns:
+- `id`: SBO identifier (e.g., `"SBO:0000176"`)
+- `name`: SBO term name
+- `comment`: Descriptive comment text associated with the SBO term
+- `is_leaf`: Boolean indicating if the term is a leaf node
 
 ---
 
-## ⚙️ What the script does (`ec_vector.py`)
+## ⚙️ What the scripts do
 
-1. Loads the input CSV using `pandas`.
+### `ec_vector.py`
+1. Loads the EC CSV using `pandas`.
 2. Uses `SentenceTransformer('all-MiniLM-L6-v2')` to vectorize the `comments` column.
 3. Constructs a result dictionary and a browsable DataFrame with embedding vectors.
 4. Saves the outputs to multiple files:
@@ -30,37 +55,55 @@ The input CSV file must contain at least the following columns:
    - `.npy`: Raw NumPy matrix for fast loading
    - `.csv`: Full table with all metadata and embedding values per dimension
 
+### `sbo_vector.py`
+1. Loads the SBO CSV using `pandas`.
+2. Uses `SentenceTransformer('all-MiniLM-L6-v2')` to vectorize the `comment` column.
+3. Constructs a result dictionary and a browsable DataFrame with embedding vectors.
+4. Saves the outputs in the same format as EC vectorization.
+
 ---
 
 ## 📄 Output Files
 
-### ✅ `ec_comments_vectors.pkl`
+### EC Output Files
 
+#### ✅ `ec_comments_vectors.pkl`
 - A Python `dict` serialized via `pickle`, containing:
   - `'ec_numbers'`: List of EC numbers
   - `'comments'`: List of corresponding comments
   - `'embeddings'`: A NumPy array of shape `(N, 384)` representing each comment vector
 
-### ✅ `ec_embeddings.npy`
-
+#### ✅ `ec_embeddings.npy`
 - A NumPy `.npy` file containing only the embeddings: shape `(N, 384)`
-- Useful for fast loading in numerical computing environments
 
-### ✅ `ec_vectorization_results.csv`
+#### ✅ `ec_vectorization_results.csv`
+Tabular file with columns:
+- `ec_num`: EC number
+- `comments`: Functional description
+- `embedding_dim`: Embedding dimensionality (384)
+- `vector_norm`: L2 norm of the embedding vector
+- `dim_0`...`dim_383`: The actual embedding vector dimensions
 
-This is a tabular file combining metadata and embedding values for easy inspection.
+### SBO Output Files
 
-#### 🔠 Columns:
+#### ✅ `sbo_comments_vectors.pkl`
+- A Python `dict` serialized via `pickle`, containing:
+  - `'sbo_ids'`: List of SBO identifiers
+  - `'names'`: List of SBO term names
+  - `'comments'`: List of corresponding comments
+  - `'is_leaf'`: List of boolean values indicating leaf nodes
+  - `'embeddings'`: A NumPy array of shape `(N, 384)` representing each comment vector
 
-| Column Name      | Description                                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| `ec_num`         | EC number (Enzyme Commission number)                                        |
-| `comments`       | Functional description or comment for that EC                               |
-| `embedding_dim`  | Embedding dimensionality (typically 384)                                    |
-| `vector_norm`    | L2 norm (magnitude) of the embedding vector (computed via `np.linalg.norm`) |
-| `dim_0`...`dim_383` | The actual embedding vector, one dimension per column                    |
+#### ✅ `sbo_embeddings.npy`
+- A NumPy `.npy` file containing only the embeddings: shape `(N, 384)`
 
-This CSV is ideal for manual inspection (e.g. in Excel), visualization, or conversion to other formats.
+#### ✅ `sbo_vectorization_results.csv`
+Tabular file with columns:
+- `id`: SBO identifier
+- `comments`: Descriptive comment
+- `embedding_dim`: Embedding dimensionality (384)
+- `vector_norm`: L2 norm of the embedding vector
+- `dim_0`...`dim_383`: The actual embedding vector dimensions
 
 ---
 
@@ -74,24 +117,33 @@ This CSV is ideal for manual inspection (e.g. in Excel), visualization, or conve
 
 ## 🛠️ How to Use
 
-### Run the script:
-
+### For EC Vectorization:
 ```bash
 python ec_vector.py
 ```
 
-### Make sure the input CSV is correctly set inside the script:
-
+Make sure the input CSV is correctly set inside the script:
 ```python
 csv_file = "entry_with_comments_202507250622.csv"
 ```
 
-You will find the output files in the same directory unless otherwise specified.
+### For SBO Vectorization:
+```bash
+python sbo_vector.py
+```
+
+Make sure the input CSV is correctly set inside the script:
+```python
+csv_file = "sbo_terms_202507292305.csv"
+```
+
+Output files will be saved in the same directory as the scripts.
 
 ---
 
 ## 📌 Notes
 
-- Only EC entries **with non-empty comments** are processed.
-- The script currently vectorizes only the `comments` field, but can be extended to combine or include `accepted_name`, `reaction`, etc.
-- The `vector_norm` column can be used to analyze how “informative” each comment is in embedding space.
+- Only entries **with non-empty comments** are processed for both EC and SBO data.
+- Both scripts use the same embedding model for consistency.
+- The `vector_norm` column can be used to analyze how "informative" each comment is in embedding space.
+- SBO data includes additional metadata like `name` and `is_leaf` status compared to EC data.
