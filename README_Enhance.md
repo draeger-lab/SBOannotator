@@ -34,7 +34,7 @@ A deep-learning classifier achieving 94% accuracy across 42 biochemical reaction
   If ERROR occurs, input command in terminal to bypass security check: 
 
    `sudo xattr -r -d com.apple.quarantine /Applications/main.app`
-    !But it only can finish rule based annotation because of complex dependencies and direcotory operation with llm.
+    !But it only can finish rule based annotation be:cause of complex dependencies and direcotory operation with llm.
 
 
 
