@@ -1,0 +1,31 @@
+{
+  "database_order": [
+    "bigg",
+    "kegg"
+  ],
+  "_usage_examples": {
+    "_comment": "Users can modify the above configuration to control behavior",
+    "bigg_only": {
+      "database_order": [
+        "bigg"
+      ],
+      "_description": "Use BiGG database only, fastest performance"
+    },
+    "fast_mode": {
+      "database_order": [
+        "bigg",
+        "kegg"
+      ],
+      "_description": "Use BiGG and KEGG only, faster processing"
+    },
+    "comprehensive_mode": {
+      "database_order": [
+        "bigg",
+        "kegg",
+        "reactome",
+        "seed"
+      ],
+      "_description": "Use all databases for comprehensive annotation"
+    }
+  }
+}

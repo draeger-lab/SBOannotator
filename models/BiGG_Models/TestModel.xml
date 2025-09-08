@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" sboTerm="SBO:0000693" level="3" version="1" fbc:required="false">
+  <model metaid="TestModel" id="TestModel" name="AKGDm Test Model" substanceUnits="mole" timeUnits="hour" extentUnits="mole">
+    <listOfUnitDefinitions>
+      <unitDefinition id="mmol_per_gDW_per_hr">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="gram" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment sboTerm="SBO:0000290" id="c" name="cytosol" spatialDimensions="3" size="1" constant="true"/>
+      <compartment sboTerm="SBO:0000290" id="m" name="mitochondria" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="M_akg_m" sboTerm="SBO:0000247" id="M_akg_m" name="2-Oxoglutarate" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="M_coa_m" sboTerm="SBO:0000247" id="M_coa_m" name="Coenzyme A" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="M_nad_m" sboTerm="SBO:0000247" id="M_nad_m" name="Nicotinamide adenine dinucleotide" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="M_co2_m" sboTerm="SBO:0000247" id="M_co2_m" name="CO2" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="M_nadh_m" sboTerm="SBO:0000247" id="M_nadh_m" name="Nicotinamide adenine dinucleotide - reduced" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species metaid="M_succoa_m" sboTerm="SBO:0000247" id="M_succoa_m" name="Succinyl-CoA" compartment="m" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_lb" value="-1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_ub" value="1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction metaid="R_AKGDm" sboTerm="SBO:0000399" id="R_AKGDm" name="2-oxoglutarate dehydrogenase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+            <rdf:Description rdf:about="#R_AKGDm">
+              <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/seed.reaction/rxn08094"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="M_akg_m" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_coa_m" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nad_m" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_co2_m" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_nadh_m" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_succoa_m" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <fbc:geneProductAssociation>
+          <fbc:and>
+            <fbc:geneProductRef fbc:geneProduct="G_100689437"/>
+            <fbc:geneProductRef fbc:geneProduct="G_100758466"/>
+            <fbc:or>
+              <fbc:geneProductRef fbc:geneProduct="G_100764862"/>
+              <fbc:geneProductRef fbc:geneProduct="G_100769436"/>
+            </fbc:or>
+          </fbc:and>
+        </fbc:geneProductAssociation>
+      </reaction>
+    </listOfReactions>
+    <fbc:listOfObjectives fbc:activeObjective="obj">
+      <fbc:objective fbc:id="obj" fbc:type="maximize">
+        <fbc:listOfFluxObjectives>
+          <fbc:fluxObjective fbc:reaction="R_AKGDm" fbc:coefficient="1"/>
+        </fbc:listOfFluxObjectives>
+      </fbc:objective>
+    </fbc:listOfObjectives>
+    <fbc:listOfGeneProducts>
+      <fbc:geneProduct sboTerm="SBO:0000243" fbc:id="G_100689437" fbc:name="hypothetical gene 1" fbc:label="gene_100689437"/>
+      <fbc:geneProduct sboTerm="SBO:0000243" fbc:id="G_100758466" fbc:name="hypothetical gene 2" fbc:label="gene_100758466"/>
+      <fbc:geneProduct sboTerm="SBO:0000243" fbc:id="G_100764862" fbc:name="hypothetical gene 3" fbc:label="gene_100764862"/>
+      <fbc:geneProduct sboTerm="SBO:0000243" fbc:id="G_100769436" fbc:name="hypothetical gene 4" fbc:label="gene_100769436"/>
+    </fbc:listOfGeneProducts>
+  </model>
+</sbml>

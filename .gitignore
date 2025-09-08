@@ -147,3 +147,5 @@ testSQL.py
 /static/
 /templates/
 .idea/
+/sboannotator.dmg
+/src/ml_sbo/models/stage1_80_stage2_10/pytorch_model.bin

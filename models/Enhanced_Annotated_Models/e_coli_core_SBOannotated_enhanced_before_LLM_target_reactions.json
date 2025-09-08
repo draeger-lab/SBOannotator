@@ -1,0 +1,178 @@
+{
+  "model_file": "../../models/Enhanced_Annotated_Models/e_coli_core_SBOannotated_enhanced_before_LLM.xml",
+  "target_sbo_terms": [
+    "SBO:0000211",
+    "SBO:0000210",
+    "SBO:0000178",
+    "SBO:0000176",
+    "SBO:0000402",
+    "SBO:0000182",
+    "SBO:0000200",
+    "SBO:0000208",
+    "SBO:0000221"
+  ],
+  "total_target_reactions": 27,
+  "reactions": {
+    "R_ACALD": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_ALCD2x": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_THD2": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_G6PDH2r": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_GAPD": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_GLUDy": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_GLUSy": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_ICDHyr": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_LDH_D": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_MDH": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_NADH16": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_NADTRHD": {
+      "sbo": "SBO:0000200",
+      "ec_numbers": [],
+      "annotation_source": "reaction_type_checks"
+    },
+    "R_ACONTa": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.2.1.3"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_ACONTb": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.2.1.3"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_PPS": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.7.9.2"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_CS": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.3.3.1",
+        "2.3.3.16",
+        "2.3.3.3"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_CYTBD": {
+      "sbo": "SBO:0000176",
+      "ec_numbers": [],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_ENO": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.2.1.11"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_SUCDi": {
+      "sbo": "SBO:0000176",
+      "ec_numbers": [],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_TALA": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.2.1.2"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_TKT1": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.2.1.1"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_TKT2": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.2.1.1"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_FBA": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.1.2.13"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_FRD7": {
+      "sbo": "SBO:0000176",
+      "ec_numbers": [],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_FUM": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.2.1.2"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_ICL": {
+      "sbo": "SBO:0000178",
+      "ec_numbers": [
+        "4.1.3.1"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    },
+    "R_MALS": {
+      "sbo": "SBO:0000402",
+      "ec_numbers": [
+        "2.3.3.9"
+      ],
+      "annotation_source": "callForECAnnotRxnUnified"
+    }
+  }
+}

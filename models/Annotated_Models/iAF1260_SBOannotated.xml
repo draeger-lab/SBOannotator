@@ -45632,7 +45632,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS1" sboTerm="SBO:0000176" id="R_AACPS1" name="Acyl-[acyl-carrier-protein] synthetase (n-C14:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS1" sboTerm="SBO:0000695" id="R_AACPS1" name="Acyl-[acyl-carrier-protein] synthetase (n-C14:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS1">
@@ -45663,7 +45663,7 @@
           </fbc:and>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS2" sboTerm="SBO:0000176" id="R_AACPS2" name="Acyl-[acyl-carrier-protein] synthetase  (n-C14:1)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS2" sboTerm="SBO:0000695" id="R_AACPS2" name="Acyl-[acyl-carrier-protein] synthetase  (n-C14:1)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS2">
@@ -45815,7 +45815,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2835"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS3" sboTerm="SBO:0000176" id="R_AACPS3" name="Acyl-[acyl-carrier-protein] synthetase  (n-C16:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS3" sboTerm="SBO:0000695" id="R_AACPS3" name="Acyl-[acyl-carrier-protein] synthetase  (n-C16:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS3">
@@ -45958,7 +45958,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS6" sboTerm="SBO:0000176" id="R_AACPS6" name="Acyl-[acyl-carrier-protein] synthetase  (n-C18:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS6" sboTerm="SBO:0000695" id="R_AACPS6" name="Acyl-[acyl-carrier-protein] synthetase  (n-C18:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS6">
@@ -46024,7 +46024,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b1119"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS7" sboTerm="SBO:0000176" id="R_AACPS7" name="Acyl-[acyl-carrier-protein] synthetase  (n-C12:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS7" sboTerm="SBO:0000695" id="R_AACPS7" name="Acyl-[acyl-carrier-protein] synthetase  (n-C12:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS7">
@@ -46079,7 +46079,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2835"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS8" sboTerm="SBO:0000176" id="R_AACPS8" name="Acyl-[acyl-carrier-protein] synthetase  (n-C10:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS8" sboTerm="SBO:0000695" id="R_AACPS8" name="Acyl-[acyl-carrier-protein] synthetase  (n-C10:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS8">
@@ -46110,7 +46110,7 @@
           </fbc:and>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AACPS9" sboTerm="SBO:0000176" id="R_AACPS9" name="Acyl-[acyl-carrier-protein] synthetase  (n-C8:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AACPS9" sboTerm="SBO:0000695" id="R_AACPS9" name="Acyl-[acyl-carrier-protein] synthetase  (n-C8:0)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AACPS9">
@@ -47513,7 +47513,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0221"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ACCOAC" sboTerm="SBO:0000176" id="R_ACCOAC" name="Acetyl-CoA carboxylase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ACCOAC" sboTerm="SBO:0000695" id="R_ACCOAC" name="Acetyl-CoA carboxylase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ACCOAC">
@@ -47633,7 +47633,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2836"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ACCOAL" sboTerm="SBO:0000176" id="R_ACCOAL" name="Acetate-CoA ligase (ADP-forming)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ACCOAL" sboTerm="SBO:0000695" id="R_ACCOAL" name="Acetate-CoA ligase (ADP-forming)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ACCOAL">
@@ -48332,7 +48332,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2836"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ADSS" sboTerm="SBO:0000176" id="R_ADSS" name="Adenylosuccinate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ADSS" sboTerm="SBO:0000695" id="R_ADSS" name="Adenylosuccinate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ADSS">
@@ -49105,7 +49105,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ACS" sboTerm="SBO:0000176" id="R_ACS" name="Acetyl-CoA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ACS" sboTerm="SBO:0000695" id="R_ACS" name="Acetyl-CoA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ACS">
@@ -50373,7 +50373,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0474"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_AIRC2" sboTerm="SBO:0000176" id="R_AIRC2" name="Phosphoribosylaminoimidazole carboxylase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_AIRC2" sboTerm="SBO:0000695" id="R_AIRC2" name="Phosphoribosylaminoimidazole carboxylase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_AIRC2">
@@ -50768,7 +50768,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ALAALAr" sboTerm="SBO:0000176" id="R_ALAALAr" name="D-alanine-D-alanine ligase (reversible)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ALAALAr" sboTerm="SBO:0000695" id="R_ALAALAr" name="D-alanine-D-alanine ligase (reversible)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ALAALAr">
@@ -51398,7 +51398,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ALATRS" sboTerm="SBO:0000176" id="R_ALATRS" name="Alanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ALATRS" sboTerm="SBO:0000695" id="R_ALATRS" name="Alanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ALATRS">
@@ -53537,7 +53537,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2574"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ASPO5" sboTerm="SBO:0000176" id="R_ASPO5" name="L-aspartate oxidase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ASPO5" sboTerm="SBO:0000200" id="R_ASPO5" name="L-aspartate oxidase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ASPO5">
@@ -53931,7 +53931,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0928"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ASPTRS" sboTerm="SBO:0000182" id="R_ASPTRS" name="Aspartyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ASPTRS" sboTerm="SBO:0000695" id="R_ASPTRS" name="Aspartyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ASPTRS">
@@ -54484,7 +54484,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3960"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ARGSS" sboTerm="SBO:0000176" id="R_ARGSS" name="Argininosuccinate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ARGSS" sboTerm="SBO:0000695" id="R_ARGSS" name="Argininosuccinate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ARGSS">
@@ -54530,7 +54530,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3172"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ARGTRS" sboTerm="SBO:0000176" id="R_ARGTRS" name="Arginyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ARGTRS" sboTerm="SBO:0000695" id="R_ARGTRS" name="Arginyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ARGTRS">
@@ -55529,7 +55529,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2957"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ASNS1" sboTerm="SBO:0000176" id="R_ASNS1" name="Asparagine synthase (glutamine-hydrolysing)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ASNS1" sboTerm="SBO:0000695" id="R_ASNS1" name="Asparagine synthase (glutamine-hydrolysing)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ASNS1">
@@ -55611,7 +55611,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3553"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ASNS2" sboTerm="SBO:0000182" id="R_ASNS2" name="Asparagine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ASNS2" sboTerm="SBO:0000695" id="R_ASNS2" name="Asparagine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ASNS2">
@@ -55648,7 +55648,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3744"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ASNTRS" sboTerm="SBO:0000176" id="R_ASNTRS" name="Asparaginyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ASNTRS" sboTerm="SBO:0000695" id="R_ASNTRS" name="Asparaginyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ASNTRS">
@@ -57127,7 +57127,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_CBPS" sboTerm="SBO:0000176" id="R_CBPS" name="Carbamoyl-phosphate synthase (glutamine-hydrolysing)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_CBPS" sboTerm="SBO:0000695" id="R_CBPS" name="Carbamoyl-phosphate synthase (glutamine-hydrolysing)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_CBPS">
@@ -59089,7 +59089,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3469"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_CTPS2" sboTerm="SBO:0000176" id="R_CTPS2" name="CTP synthase (glutamine)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_CTPS2" sboTerm="SBO:0000695" id="R_CTPS2" name="CTP synthase (glutamine)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_CTPS2">
@@ -59162,7 +59162,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2780"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_CU1Opp" sboTerm="SBO:0000176" id="R_CU1Opp" name="Cuprous Oxidase (Cu+1)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_CU1Opp" sboTerm="SBO:0000200" id="R_CU1Opp" name="Cuprous Oxidase (Cu+1)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_CU1Opp">
@@ -60262,7 +60262,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0037"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_CRNCAR" sboTerm="SBO:0000176" id="R_CRNCAR" name="Carnitine-CoA racemase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_CRNCAR" sboTerm="SBO:0000377" id="R_CRNCAR" name="Carnitine-CoA racemase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_CRNCAR">
@@ -60555,7 +60555,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0036"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_CYSTRS" sboTerm="SBO:0000182" id="R_CYSTRS" name="Cysteinyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_CYSTRS" sboTerm="SBO:0000695" id="R_CYSTRS" name="Cysteinyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_CYSTRS">
@@ -61774,7 +61774,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3041"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_DBTS" sboTerm="SBO:0000176" id="R_DBTS" name="Dethiobiotin synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_DBTS" sboTerm="SBO:0000695" id="R_DBTS" name="Dethiobiotin synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_DBTS">
@@ -64007,7 +64007,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_DHFS" sboTerm="SBO:0000182" id="R_DHFS" name="Dihydrofolate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_DHFS" sboTerm="SBO:0000695" id="R_DHFS" name="Dihydrofolate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_DHFS">
@@ -67211,7 +67211,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0583"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ENTERES" sboTerm="SBO:0000176" id="R_ENTERES" name="Enterochelin Esterase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ENTERES" sboTerm="SBO:0000376" id="R_ENTERES" name="Enterochelin Esterase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ENTERES">
@@ -72693,7 +72693,7 @@
           <speciesReference species="M_gam6p_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
       </reaction>
-      <reaction metaid="R_F6PA" sboTerm="SBO:0000176" id="R_F6PA" name="Fructose 6-phosphate aldolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_F6PA" sboTerm="SBO:0000211" id="R_F6PA" name="Fructose 6-phosphate aldolase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_F6PA">
@@ -79959,7 +79959,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b1415"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GDMANE" sboTerm="SBO:0000176" id="R_GDMANE" name="GDP-4-dehydro-6-deoxy-D-mannose epimerase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GDMANE" sboTerm="SBO:0000377" id="R_GDMANE" name="GDP-4-dehydro-6-deoxy-D-mannose epimerase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GDMANE">
@@ -80335,7 +80335,7 @@
           <speciesReference species="M_gthox_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
       </reaction>
-      <reaction metaid="R_GLNS" sboTerm="SBO:0000176" id="R_GLNS" name="Glutamine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLNS" sboTerm="SBO:0000695" id="R_GLNS" name="Glutamine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLNS">
@@ -80391,7 +80391,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLNTRS" sboTerm="SBO:0000176" id="R_GLNTRS" name="Glutaminyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLNTRS" sboTerm="SBO:0000695" id="R_GLNTRS" name="Glutaminyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLNTRS">
@@ -80661,7 +80661,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b1301"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GGPTRCS" sboTerm="SBO:0000176" id="R_GGPTRCS" name="Gamma glutamyl putrescine synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GGPTRCS" sboTerm="SBO:0000695" id="R_GGPTRCS" name="Gamma glutamyl putrescine synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GGPTRCS">
@@ -80823,7 +80823,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3648"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLUCYS" sboTerm="SBO:0000176" id="R_GLUCYS" name="Gamma-glutamylcysteine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLUCYS" sboTerm="SBO:0000695" id="R_GLUCYS" name="Gamma-glutamylcysteine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLUCYS">
@@ -81546,7 +81546,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLUTRS" sboTerm="SBO:0000182" id="R_GLUTRS" name="Glutamyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLUTRS" sboTerm="SBO:0000695" id="R_GLUTRS" name="Glutamyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLUTRS">
@@ -82631,7 +82631,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0104"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GMPS2" sboTerm="SBO:0000176" id="R_GMPS2" name="GMP synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GMPS2" sboTerm="SBO:0000695" id="R_GMPS2" name="GMP synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GMPS2">
@@ -84458,7 +84458,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GLYTRS" sboTerm="SBO:0000176" id="R_GLYTRS" name="Glycyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GLYTRS" sboTerm="SBO:0000695" id="R_GLYTRS" name="Glycyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GLYTRS">
@@ -84545,7 +84545,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2988"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GSPMDS" sboTerm="SBO:0000182" id="R_GSPMDS" name="Glutathionylspermidine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GSPMDS" sboTerm="SBO:0000695" id="R_GSPMDS" name="Glutathionylspermidine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GSPMDS">
@@ -85020,7 +85020,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_GTHS" sboTerm="SBO:0000176" id="R_GTHS" name="Glutathione synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_GTHS" sboTerm="SBO:0000695" id="R_GTHS" name="Glutathione synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_GTHS">
@@ -86536,7 +86536,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_HEPT1" sboTerm="SBO:0000176" id="R_HEPT1" name="Heptosyltransferase I (LPS core synthesis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_HEPT1" sboTerm="SBO:0000402" id="R_HEPT1" name="Heptosyltransferase I (LPS core synthesis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_HEPT1">
@@ -86586,7 +86586,7 @@
           <speciesReference species="M_hom__L_e" stoichiometry="1" constant="true"/>
         </listOfReactants>
       </reaction>
-      <reaction metaid="R_HEPT2" sboTerm="SBO:0000176" id="R_HEPT2" name="Heptosyltransferase II (LPS core synthesis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_HEPT2" sboTerm="SBO:0000402" id="R_HEPT2" name="Heptosyltransferase II (LPS core synthesis)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_HEPT2">
@@ -87401,7 +87401,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2022"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_HISTRS" sboTerm="SBO:0000176" id="R_HISTRS" name="Histidyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_HISTRS" sboTerm="SBO:0000695" id="R_HISTRS" name="Histidyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_HISTRS">
@@ -88392,7 +88392,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0348"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_ILETRS" sboTerm="SBO:0000176" id="R_ILETRS" name="Isoleucyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_ILETRS" sboTerm="SBO:0000695" id="R_ILETRS" name="Isoleucyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_ILETRS">
@@ -91144,7 +91144,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_LEUTRS" sboTerm="SBO:0000176" id="R_LEUTRS" name="Leucyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_LEUTRS" sboTerm="SBO:0000695" id="R_LEUTRS" name="Leucyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_LEUTRS">
@@ -93279,7 +93279,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0494"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_LYSTRS" sboTerm="SBO:0000176" id="R_LYSTRS" name="Lysyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_LYSTRS" sboTerm="SBO:0000695" id="R_LYSTRS" name="Lysyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_LYSTRS">
@@ -97362,7 +97362,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_METTRS" sboTerm="SBO:0000176" id="R_METTRS" name="Methionyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_METTRS" sboTerm="SBO:0000695" id="R_METTRS" name="Methionyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_METTRS">
@@ -100392,7 +100392,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_NTP12" sboTerm="SBO:0000176" id="R_NTP12" name="Nucleoside-triphosphatase (XTP)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_NTP12" sboTerm="SBO:0000376" id="R_NTP12" name="Nucleoside-triphosphatase (XTP)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_NTP12">
@@ -102420,7 +102420,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b2032"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PACCOAL" sboTerm="SBO:0000176" id="R_PACCOAL" name="Phenylacetate-CoA ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PACCOAL" sboTerm="SBO:0000695" id="R_PACCOAL" name="Phenylacetate-CoA ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PACCOAL">
@@ -102488,7 +102488,7 @@
           <speciesReference species="M_udp_c" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="R_PANTS" sboTerm="SBO:0000176" id="R_PANTS" name="Pantothenate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PANTS" sboTerm="SBO:0000695" id="R_PANTS" name="Pantothenate synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PANTS">
@@ -106939,7 +106939,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PHETRS" sboTerm="SBO:0000176" id="R_PHETRS" name="Phenylalanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PHETRS" sboTerm="SBO:0000695" id="R_PHETRS" name="Phenylalanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PHETRS">
@@ -108975,7 +108975,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b3957"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PPNCL2" sboTerm="SBO:0000176" id="R_PPNCL2" name="Phosphopantothenate-cysteine ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PPNCL2" sboTerm="SBO:0000695" id="R_PPNCL2" name="Phosphopantothenate-cysteine ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PPNCL2">
@@ -109112,7 +109112,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PROTRS" sboTerm="SBO:0000176" id="R_PROTRS" name="Prolyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PROTRS" sboTerm="SBO:0000695" id="R_PROTRS" name="Prolyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PROTRS">
@@ -109784,7 +109784,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b4160"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PRAGSr" sboTerm="SBO:0000176" id="R_PRAGSr" name="Phosphoribosylglycinamide synthase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PRAGSr" sboTerm="SBO:0000695" id="R_PRAGSr" name="Phosphoribosylglycinamide synthase" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PRAGSr">
@@ -109816,7 +109816,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b4005"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PRAIS" sboTerm="SBO:0000176" id="R_PRAIS" name="Phosphoribosylaminoimidazole synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PRAIS" sboTerm="SBO:0000695" id="R_PRAIS" name="Phosphoribosylaminoimidazole synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PRAIS">
@@ -109945,7 +109945,7 @@
           <speciesReference species="M_nac_c" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="R_PRASCSi" sboTerm="SBO:0000176" id="R_PRASCSi" name="Phosphoribosylaminoimidazolesuccinocarboxamide synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PRASCSi" sboTerm="SBO:0000695" id="R_PRASCSi" name="Phosphoribosylaminoimidazolesuccinocarboxamide synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PRASCSi">
@@ -110107,7 +110107,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b4160"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PRFGS" sboTerm="SBO:0000176" id="R_PRFGS" name="Phosphoribosylformylglycinamidine synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PRFGS" sboTerm="SBO:0000695" id="R_PRFGS" name="Phosphoribosylformylglycinamidine synthase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PRFGS">
@@ -111224,7 +111224,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_PTHRpp" sboTerm="SBO:0000176" id="R_PTHRpp" name="Phospho-L-threonine phosphatase (periplasmic)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_PTHRpp" sboTerm="SBO:0000376" id="R_PTHRpp" name="Phospho-L-threonine phosphatase (periplasmic)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_PTHRpp">
@@ -113892,7 +113892,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0415"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_SERTRS" sboTerm="SBO:0000176" id="R_SERTRS" name="Seryl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_SERTRS" sboTerm="SBO:0000695" id="R_SERTRS" name="Seryl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_SERTRS">
@@ -113922,7 +113922,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0893"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_SERTRS2" sboTerm="SBO:0000176" id="R_SERTRS2" name="Seryl-tRNA synthetase (selenocystein)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_SERTRS2" sboTerm="SBO:0000695" id="R_SERTRS2" name="Seryl-tRNA synthetase (selenocystein)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_SERTRS2">
@@ -115562,7 +115562,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_THRTRS" sboTerm="SBO:0000176" id="R_THRTRS" name="Threonyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_THRTRS" sboTerm="SBO:0000695" id="R_THRTRS" name="Threonyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_THRTRS">
@@ -116117,7 +116117,7 @@
           </fbc:and>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_SUCBZL" sboTerm="SBO:0000176" id="R_SUCBZL" name="O-succinylbenzoate-CoA ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_SUCBZL" sboTerm="SBO:0000695" id="R_SUCBZL" name="O-succinylbenzoate-CoA ligase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_SUCBZL">
@@ -116311,7 +116311,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_NADS1" sboTerm="SBO:0000182" id="R_NADS1" name="NAD synthase (nh3)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_NADS1" sboTerm="SBO:0000695" id="R_NADS1" name="NAD synthase (nh3)" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_NADS1">
@@ -116631,7 +116631,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_SUCOAS" sboTerm="SBO:0000176" id="R_SUCOAS" name="Succinyl-CoA synthetase (ADP-forming)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_SUCOAS" sboTerm="SBO:0000695" id="R_SUCOAS" name="Succinyl-CoA synthetase (ADP-forming)" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_SUCOAS">
@@ -118303,7 +118303,7 @@
           </fbc:and>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_TRPTRS" sboTerm="SBO:0000176" id="R_TRPTRS" name="Tryptophanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_TRPTRS" sboTerm="SBO:0000695" id="R_TRPTRS" name="Tryptophanyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_TRPTRS">
@@ -119509,7 +119509,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_TYRTRS" sboTerm="SBO:0000176" id="R_TYRTRS" name="Tyrosyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_TYRTRS" sboTerm="SBO:0000695" id="R_TYRTRS" name="Tyrosyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_TYRTRS">
@@ -119875,7 +119875,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0179"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UAAGDS" sboTerm="SBO:0000176" id="R_UAAGDS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimelate synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UAAGDS" sboTerm="SBO:0000695" id="R_UAAGDS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimelate synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UAAGDS">
@@ -119932,7 +119932,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0480"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_VALTRS" sboTerm="SBO:0000176" id="R_VALTRS" name="Valyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_VALTRS" sboTerm="SBO:0000695" id="R_VALTRS" name="Valyl-tRNA synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_VALTRS">
@@ -121491,7 +121491,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0090"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UAMAGS" sboTerm="SBO:0000176" id="R_UAMAGS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamate synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UAMAGS" sboTerm="SBO:0000695" id="R_UAMAGS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamate synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UAMAGS">
@@ -121529,7 +121529,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0088"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UAMAS" sboTerm="SBO:0000176" id="R_UAMAS" name="UDP-N-acetylmuramoyl-L-alanine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UAMAS" sboTerm="SBO:0000695" id="R_UAMAS" name="UDP-N-acetylmuramoyl-L-alanine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UAMAS">
@@ -122234,7 +122234,7 @@
           <fbc:geneProductRef fbc:geneProduct="G_b0505"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="R_UGMDDS" sboTerm="SBO:0000176" id="R_UGMDDS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+      <reaction metaid="R_UGMDDS" sboTerm="SBO:0000695" id="R_UGMDDS" name="UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine synthetase" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
         <sbml:annotation xmlns:sbml="http://www.sbml.org/sbml/level3/version1/core">
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <rdf:Description rdf:about="#R_UGMDDS">

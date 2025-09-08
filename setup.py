@@ -10,7 +10,6 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/draeger-lab/SBOannotator',
-    author='Nantia Leonidou, Elisabeth Fritze, Alina Renz, Andreas Dräger',
     author_email='nantia.leonidou@uni-tuebingen.de',
     license='GPL-3.0',
     keywords=['SBOannotator', 'SBO Terms', 'automated tool'],
