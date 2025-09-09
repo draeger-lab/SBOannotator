@@ -18,30 +18,13 @@ ________________________________________________________________________________
 ### Overview
 This project transforms SBOannotator from a static, hard-coded tool into a dynamic, intelligent system for annotating Systems Biology Ontology (SBO) terms in SBML models. The enhanced system integrates real-time SBO term retrieval, multiple enzymology data sources, and LLM-assisted annotation—significantly improving accuracy and usability while preserving the core rule-based strengths. A standalone desktop GUI with interactive visualization makes powerful annotation capabilities accessible to a broader community of systems biology researchers.
 The system delivers three key innovations:
-Automated GitHub integration for real-time SBO file updates;
-
-
-A three-layer rule-based annotation workflow;
-
-
-A deep-learning classifier achieving 94% accuracy across 42 biochemical reaction classes.
-
-
-### Desktop App
-
-+ Mac: download dmg which is saved in the root directory:`sboannotator.dmg`
-
-  If ERROR occurs, input command in terminal to bypass security check: 
-
-   `sudo xattr -r -d com.apple.quarantine /Applications/main.app`
-    !But it only can finish rule based annotation be:cause of complex dependencies and direcotory operation with llm.
-
-
-
+- Automated GitHub integration for real-time SBO file updates;
+- A three-layer rule-based annotation workflow based on 4 database(bigg, kegg, reactome, seed);
+- A finetuned LLM achieving 94% accuracy to predict SBO terms within 42 candidates for EC number .
 
 ### Input data
 + an SBML document
-+ an sbo terms (.json or obo)(optional)
++ a sbo terms (.json or obo)(optional)
 
 
 ### Outputs
@@ -49,28 +32,40 @@ A deep-learning classifier achieving 94% accuracy across 42 biochemical reaction
 + LLM Annototed libSBML model
 + Uptodate SBO terms (.json) 
 
-### Usage
+### Usage with terminal
 This tool has the following dependencies:
 
-python >=3.9.6
+**Python** >= 3.9.6
 
-Packages:
+**Packages:**
+- sqlite3
+- libsbml
+- collections
+- requests
+- json
+- time
 
-sqlite3
-libsbml
-collections
-requests
-json
-time
+**Trained Model (423MB):**
+- Download pretrained model: https://drive.google.com/file/d/1Kypb5YmLKUbFY9tZuzk0p1Mn_FWaD0g_/view?usp=drive_link
+- Place the downloaded file at: `src/ml_sbo/models/stage1_80_stage2_10/pytorch_model.bin`
 
--`pip install -r requirements.txt`
+**Run**
+- `pip install -r requirements.txt`
+- `python main.py` in the command line within the project folder. If ERROR occurs, check the current version of Python: 
 
-run `python main.py` in the command line within the project folder.
-
-If ERROR occurs, check the current version of Python: 
-
-- `python --version'`
+- `python --version`
 - `conda install python>=3.9.6`
+
+
+### Desktop App
+
+1. macOS: Download the DMG  
+  https://drive.google.com/file/d/1Ltm2nsFXpuVh7wgmQAY9Jg67EPJEooHW/view?usp=drive_link
+
+2. Open the `.dmg`, then drag the app into **Applications**.
+3. First launch: if Gatekeeper blocks the app, remove the quarantine attribute in Terminal:
+   ```bash
+   sudo xattr -r -d com.apple.quarantine "/Applications/main.app"
 
 ### Exemplary models and results
 The folder `models/Customer_Models` contains a  models as it were downloaded from
