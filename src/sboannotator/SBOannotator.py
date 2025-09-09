@@ -18,6 +18,19 @@ RXN_BOUND_PARAMETERS = ["cobra_default_lb", "cobra_default_ub", "cobra_0_bound",
 
 
 def getCompartmentlessSpeciesId(speciesReference):
+    """
+    Get species ID without compartment suffix.
+    
+    Input:
+        speciesReference: SBML species reference object
+    
+    Output:
+        str: Species ID with compartment suffix removed
+    
+    Purpose:
+        Extracts the base species identifier by removing compartment information,
+        useful for comparing species across different compartments.
+    """
     speciesId = speciesReference.getSpecies()
     species = speciesReference.getModel().getSpecies(speciesId)
     compartment = species.getCompartment()
@@ -26,6 +39,19 @@ def getCompartmentlessSpeciesId(speciesReference):
 
 
 def getCompartmentFromSpeciesRef(speciesReference):
+    """
+    Get compartment from species reference.
+    
+    Input:
+        speciesReference: SBML species reference object
+    
+    Output:
+        str: Compartment identifier
+    
+    Purpose:
+        Extracts compartment information from a species reference,
+        useful for analyzing transport reactions and cellular localization.
+    """
     speciesId = speciesReference.getSpecies()
     species = speciesReference.getModel().getSpecies(speciesId)
     compartment = species.getCompartment()
@@ -33,10 +59,36 @@ def getCompartmentFromSpeciesRef(speciesReference):
 
 
 def returnCompartment(identifier):
+    """
+    Return compartment from identifier.
+    
+    Input:
+        identifier (str): Species or metabolite identifier
+    
+    Output:
+        str: Last character of identifier (compartment)
+    
+    Purpose:
+        Extracts compartment information from metabolite identifier
+        by returning the last character.
+    """
     return identifier[-1]
 
 
 def getReactantIds(react):
+    """
+    Get list of reactant species IDs from reaction.
+    
+    Input:
+        react: SBML reaction object
+    
+    Output:
+        list: List of reactant species IDs
+    
+    Purpose:
+        Extracts all reactant species identifiers from a reaction,
+        useful for reaction analysis and classification.
+    """
     lst = []
     for metabolite in react.getListOfReactants():
         lst.append(metabolite.getSpecies())
@@ -51,6 +103,19 @@ def getCompartmentlessReactantIds(react):
 
 
 def getProductIds(react):
+    """
+    Get list of product species IDs from reaction.
+    
+    Input:
+        react: SBML reaction object
+    
+    Output:
+        list: List of product species IDs
+    
+    Purpose:
+        Extracts all product species identifiers from a reaction,
+        useful for reaction analysis and classification.
+    """
     lst = []
     for metabolite in react.getListOfProducts():
         lst.append(metabolite.getSpecies())
@@ -140,11 +205,24 @@ def soleProtonTransported(react):
 
 
 def getECNums(react):
+    """
+    Extract EC numbers from reaction annotation.
+    
+    Input:
+        react: SBML reaction object
+    
+    Output:
+        list: List of EC numbers found in annotation
+    
+    Purpose:
+        Parses reaction annotation string to extract EC numbers,
+        which are essential for SBO term assignment.
+    """
     lines = react.getAnnotationString().split('\n')
     ECNums = []
     for line in lines:
-        if 'ec-code' in line:
-            ECNums.append(line.split('ec-code')[1][1:][:-3])
+        if 'ec.py-code' in line:
+            ECNums.append(line.split('ec.py-code')[1][1:][:-3])
     return ECNums
 
 
@@ -154,12 +232,12 @@ def multipleECs(react, ECNums):
     for ec in ECNums:
         lst.append(ec.split('.')[0])
 
-    # if ec numbers are from different enzyme classes, based on first digit
+    # if ec.py numbers are from different enzyme classes, based on first digit
     # no ambiguous classification possible
     if len(set(lst)) > 1:
         react.setSBOTerm('SBO:0000176')  # metabolic rxn
 
-    # if ec numbers are from the same enzyme classes,
+    # if ec.py numbers are from the same enzyme classes,
     # assign parent SBO term based on first digit in EC number
     else:
 
@@ -378,6 +456,50 @@ def addSBOviaEC(react, cur):
     else:
         handleMultipleOrNoECs(react, getECNums(react))
 
+def addSBOviaEC_unified(react, cur, ec_nums):
+    # cur.execute(): case insensitivez
+    if len(ec_nums) == 1:
+        ECnum = ec_nums[0]  # Take first element from list
+        splittedEC = ECnum.split('.')
+        if len(splittedEC) == 4:
+            ECpos1 = splittedEC[0]
+            ECpos1to2 = ECpos1 + '.' + splittedEC[1]
+            ECpos1to3 = ECpos1to2 + '.' + splittedEC[2]
+            query4 = cur.execute("""SELECT sbo_term
+                                     FROM ec_to_sbo 
+                                    WHERE ecnum = ?""", [ECnum])
+            result4 = cur.fetchone()
+            if result4 is not None:
+                sbo4 = result4[0]
+                react.setSBOTerm(sbo4)
+            else:
+                query3 = cur.execute("""SELECT sbo_term
+                                          FROM ec_to_sbo 
+                                         WHERE ecnum = ?""", [ECpos1to3])
+                result3 = cur.fetchone()
+                if result3 is not None:
+                    sbo3 = result3[0]
+                    react.setSBOTerm(sbo3)
+                else:
+                    query2 = cur.execute("""SELECT sbo_term
+                                              FROM ec_to_sbo
+                                             WHERE ecnum = ?""", [ECpos1to2])
+                    result2 = cur.fetchone()
+                    if result2 is not None:
+                        sbo2 = result2[0]
+                        react.setSBOTerm(sbo2)
+                    else:
+                        query1 = cur.execute("""SELECT sbo_term
+                                                  FROM ec_to_sbo 
+                                                 WHERE ecnum = ?""", [ECpos1])
+                        result1 = cur.fetchone()
+                        if result1 is not None:
+                            sbo1 = result1[0]
+                            react.setSBOTerm(sbo1)
+    else:
+        handleMultipleOrNoECs(react, ec_nums)
+
+
 
 def addSBOfromDB(react, cur):
     """ Uses BiGG identifiers to assign SBO terms from DB """
@@ -542,7 +664,7 @@ def sbo_annotator(doc, model_libsbml, modelType, database_name, new_filename):
 
         if reaction.getSBOTermID() == 'SBO:0000176':
             # if EC number exists for reaction, use it to derive SBO term via DB use
-            if 'ec-code' in reaction.getAnnotationString():
+            if 'ec.py-code' in reaction.getAnnotationString():
                 ECNums = getECNums(reaction)
                 multipleECs(reaction, ECNums)
             # if EC number does not exist for reaction, use it to derive SBO term via API call
