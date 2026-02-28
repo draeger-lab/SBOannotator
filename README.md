@@ -83,3 +83,29 @@ If ERROR occurs, check the current version of Python:
 The folder `models/BiGG_Models` contains all the tested models as they were downloaded from
 the BiGG database. 
 The annotated models after using the SBOannotator are listed in the folder named `models/Annotated_Models`.
+## Features
+
+- Automatic assignment of precise SBO terms to SBML model entities
+- Detailed classification of biochemical reactions
+- Separate classification of transport reactions
+- Annotation of metabolites, genes, and pseudo-reactions
+- Support for multiple modelling frameworks
+
+
+## Improved Installation Instructions
+
+Make sure you are using Python version 3.8.5 or above.
+
+Check Python version:
+python --version
+
+If needed:
+conda install python>=3.8.5
+
+Install using:
+pip install SBOannotator
+
+
+## Contribution
+
+This fork improves documentation clarity and structure for better usability.
